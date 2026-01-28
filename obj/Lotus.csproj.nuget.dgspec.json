@@ -17,14 +17,14 @@
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0-windows10.0.22621.0"
+          "net9.0-windows"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0-windows10.0.22621": {
-            "targetAlias": "net9.0-windows10.0.22621.0",
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows",
             "projectReferences": {}
           }
         },
@@ -41,16 +41,26 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net9.0-windows10.0.22621": {
-          "targetAlias": "net9.0-windows10.0.22621.0",
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
           "dependencies": {
-            "Microsoft.Windows.SDK.BuildTools": {
+            "Avalonia": {
               "target": "Package",
-              "version": "[10.0.26100.1742, )"
+              "version": "[11.1.0, )"
             },
-            "Microsoft.WindowsAppSDK": {
+            "Avalonia.Desktop": {
               "target": "Package",
-              "version": "[1.6.250108002, )"
+              "version": "[11.1.0, )"
+            },
+            "Avalonia.Themes.Fluent": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.12, )",
+              "autoReferenced": true
             },
             "NAudio": {
               "target": "Package",
@@ -78,19 +88,12 @@
               "version": "[9.0.12, 9.0.12]"
             },
             {
-              "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.22621.57, 10.0.22621.57]"
-            },
-            {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
               "version": "[9.0.12, 9.0.12]"
             }
           ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.Windows.SDK.NET.Ref.Windows": {
               "privateAssets": "all"
             }
           },

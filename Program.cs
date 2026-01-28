@@ -1,34 +1,17 @@
-using Microsoft.UI.Dispatching;
-using Microsoft.UI.Xaml;
+// Program.cs
 using System;
-using System.Runtime.InteropServices;
-using System.Threading;
+using Avalonia;
 
 namespace Lotus;
 
-/// <summary>
-/// Custom entry point for unpackaged WinUI 3 application
-/// </summary>
-public static class Program
+class Program
 {
     [STAThread]
-    static void Main(string[] args)
-    {
-        try 
-        {
-            WinRT.ComWrappersSupport.InitializeComWrappers();
+    public static void Main(string[] args) => BuildAvaloniaApp()
+        .StartWithClassicDesktopLifetime(args);
 
-            Application.Start((p) =>
-            {
-                var context = new DispatcherQueueSynchronizationContext(DispatcherQueue.GetForCurrentThread());
-                SynchronizationContext.SetSynchronizationContext(context);
-                new App();
-            });
-        }
-        catch (Exception ex)
-        {
-             var logPath = System.IO.Path.Combine(AppContext.BaseDirectory, "crash_log.txt");
-             System.IO.File.WriteAllText(logPath, "PROGRAM CRASH:\n" + ex.ToString());
-        }
-    }
+    public static AppBuilder BuildAvaloniaApp()
+        => AppBuilder.Configure<App>()
+            .UsePlatformDetect()
+            .LogToTrace();
 }

@@ -1,0 +1,15 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Lotus.App"
+             RequestedThemeVariant="Light">
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+    
+    <Application.Resources>
+        <SolidColorBrush x:Key="PrimaryBrush" Color="#FF22C55E"/>
+        <SolidColorBrush x:Key="SecondaryBrush" Color="#FF86EFAC"/>
+        <SolidColorBrush x:Key="AccentBrush" Color="#FF16A34A"/>
+        <SolidColorBrush x:Key="GlassBrush" Color="#44FFFFFF"/>
+    </Application.Resources>
+</Application>

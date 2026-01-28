@@ -1,7 +1,371 @@
 {
   "version": 3,
   "targets": {
-    "net9.0-windows10.0.22621": {
+    "net9.0-windows7.0": {
+      "Avalonia/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia.BuildServices": "0.0.29",
+          "Avalonia.Remote.Protocol": "11.1.0",
+          "MicroCom.Runtime": "0.11.0"
+        },
+        "compile": {
+          "ref/net8.0/Avalonia.Base.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Controls.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.DesignerSupport.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Dialogs.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Markup.Xaml.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Markup.dll": {
+            "related": ".Xaml.xml;.xml"
+          },
+          "ref/net8.0/Avalonia.Metal.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.MicroCom.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.OpenGL.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Vulkan.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.dll": {
+            "related": ".Base.xml;.Controls.xml;.DesignerSupport.xml;.Dialogs.xml;.Markup.Xaml.xml;.Markup.xml;.Metal.xml;.MicroCom.xml;.OpenGL.xml;.Vulkan.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Base.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Controls.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.DesignerSupport.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Dialogs.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Markup.Xaml.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Markup.dll": {
+            "related": ".Xaml.xml;.xml"
+          },
+          "lib/net8.0/Avalonia.Metal.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.MicroCom.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.OpenGL.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Vulkan.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.dll": {
+            "related": ".Base.xml;.Controls.xml;.DesignerSupport.xml;.Dialogs.xml;.Markup.Xaml.xml;.Markup.xml;.Metal.xml;.MicroCom.xml;.OpenGL.xml;.Vulkan.xml;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Avalonia.props": {},
+          "buildTransitive/Avalonia.targets": {}
+        }
+      },
+      "Avalonia.Angle.Windows.Natives/2.1.22045.20230930": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/av_libglesv2.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/av_libglesv2.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/av_libglesv2.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Avalonia.BuildServices/0.0.29": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Avalonia.BuildServices.targets": {}
+        }
+      },
+      "Avalonia.Desktop/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0",
+          "Avalonia.Native": "11.1.0",
+          "Avalonia.Skia": "11.1.0",
+          "Avalonia.Win32": "11.1.0",
+          "Avalonia.X11": "11.1.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Desktop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Desktop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.FreeDesktop/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0",
+          "Tmds.DBus.Protocol": "0.16.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.FreeDesktop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.FreeDesktop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Native/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Native.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Native.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libAvaloniaNative.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          }
+        }
+      },
+      "Avalonia.Remote.Protocol/11.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Avalonia.Remote.Protocol.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Remote.Protocol.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Skia/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0",
+          "HarfBuzzSharp": "7.3.0.2",
+          "HarfBuzzSharp.NativeAssets.Linux": "7.3.0.2",
+          "HarfBuzzSharp.NativeAssets.WebAssembly": "7.3.0.2",
+          "SkiaSharp": "2.88.8",
+          "SkiaSharp.NativeAssets.Linux": "2.88.8",
+          "SkiaSharp.NativeAssets.WebAssembly": "2.88.8"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Skia.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Skia.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Themes.Fluent/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Themes.Fluent.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Themes.Fluent.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Win32/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0",
+          "Avalonia.Angle.Windows.Natives": "2.1.22045.20230930",
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Win32.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Win32.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.X11/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0",
+          "Avalonia.FreeDesktop": "11.1.0",
+          "Avalonia.Skia": "11.1.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.X11.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.X11.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HarfBuzzSharp/7.3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "7.3.0.2",
+          "HarfBuzzSharp.NativeAssets.macOS": "7.3.0.2"
+        },
+        "compile": {
+          "lib/net6.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Linux/7.3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.2"
+        },
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-musl-x64/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/libHarfBuzzSharp.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.macOS/7.3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libHarfBuzzSharp.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.WebAssembly/7.3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/netstandard1.0/HarfBuzzSharp.NativeAssets.WebAssembly.props": {},
+          "buildTransitive/netstandard1.0/HarfBuzzSharp.NativeAssets.WebAssembly.targets": {}
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/7.3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "MicroCom.Runtime/0.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/MicroCom.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/MicroCom.Runtime.dll": {}
+        }
+      },
+      "Microsoft.NET.ILLink.Tasks/9.0.12": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -9,26 +373,6 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
-        }
-      },
-      "Microsoft.Web.WebView2/1.0.2651.64": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Web.WebView2.targets": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win-arm64/native/WebView2Loader.dll": {
-            "assetType": "native",
-            "rid": "win-arm64"
-          },
-          "runtimes/win-x64/native/WebView2Loader.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/WebView2Loader.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
-          }
         }
       },
       "Microsoft.Win32.Registry/4.7.0": {
@@ -55,134 +399,6 @@
           "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "assetType": "runtime",
             "rid": "win"
-          }
-        }
-      },
-      "Microsoft.Windows.SDK.BuildTools/10.0.26100.1742": {
-        "type": "package",
-        "build": {
-          "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
-          "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
-        }
-      },
-      "Microsoft.WindowsAppSDK/1.6.250108002": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Web.WebView2": "1.0.2651.64",
-          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756"
-        },
-        "compile": {
-          "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.WinUI.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppLifecycle.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Builder.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.Resources.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Management.Deployment.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.PushNotifications.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Security.AccessControl.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Storage.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Power.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Widgets.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.WinUI.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppLifecycle.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Builder.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.Resources.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Management.Deployment.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.PushNotifications.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Security.AccessControl.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Storage.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Power.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Widgets.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll": {}
-        },
-        "build": {
-          "buildTransitive/Microsoft.WindowsAppSDK.props": {},
-          "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win-arm64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {
-            "assetType": "native",
-            "rid": "win-arm64"
-          },
-          "runtimes/win-x64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
           }
         }
       },
@@ -303,6 +519,129 @@
           "lib/netstandard2.0/NAudio.WinMM.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "SkiaSharp/2.88.8": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.8",
+          "SkiaSharp.NativeAssets.macOS": "2.88.8"
+        },
+        "compile": {
+          "lib/net6.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Linux/2.88.8": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.8"
+        },
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-musl-x64/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libSkiaSharp.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.WebAssembly/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/netstandard1.0/SkiaSharp.NativeAssets.WebAssembly.props": {},
+          "buildTransitive/netstandard1.0/SkiaSharp.NativeAssets.WebAssembly.targets": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "System.IO.Pipelines/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Security.AccessControl/4.7.0": {
@@ -350,9 +689,333 @@
             "rid": "win"
           }
         }
+      },
+      "Tmds.DBus.Protocol/0.16.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Tmds.DBus.Protocol.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Tmds.DBus.Protocol.dll": {}
+        }
       }
     },
-    "net9.0-windows10.0.22621/win-x64": {
+    "net9.0-windows7.0/win-x64": {
+      "Avalonia/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia.BuildServices": "0.0.29",
+          "Avalonia.Remote.Protocol": "11.1.0",
+          "MicroCom.Runtime": "0.11.0"
+        },
+        "compile": {
+          "ref/net8.0/Avalonia.Base.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Controls.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.DesignerSupport.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Dialogs.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Markup.Xaml.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Markup.dll": {
+            "related": ".Xaml.xml;.xml"
+          },
+          "ref/net8.0/Avalonia.Metal.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.MicroCom.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.OpenGL.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.Vulkan.dll": {
+            "related": ".xml"
+          },
+          "ref/net8.0/Avalonia.dll": {
+            "related": ".Base.xml;.Controls.xml;.DesignerSupport.xml;.Dialogs.xml;.Markup.Xaml.xml;.Markup.xml;.Metal.xml;.MicroCom.xml;.OpenGL.xml;.Vulkan.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Base.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Controls.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.DesignerSupport.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Dialogs.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Markup.Xaml.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Markup.dll": {
+            "related": ".Xaml.xml;.xml"
+          },
+          "lib/net8.0/Avalonia.Metal.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.MicroCom.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.OpenGL.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.Vulkan.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/Avalonia.dll": {
+            "related": ".Base.xml;.Controls.xml;.DesignerSupport.xml;.Dialogs.xml;.Markup.Xaml.xml;.Markup.xml;.Metal.xml;.MicroCom.xml;.OpenGL.xml;.Vulkan.xml;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Avalonia.props": {},
+          "buildTransitive/Avalonia.targets": {}
+        }
+      },
+      "Avalonia.Angle.Windows.Natives/2.1.22045.20230930": {
+        "type": "package",
+        "native": {
+          "runtimes/win-x64/native/av_libglesv2.dll": {}
+        }
+      },
+      "Avalonia.BuildServices/0.0.29": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Avalonia.BuildServices.targets": {}
+        }
+      },
+      "Avalonia.Desktop/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0",
+          "Avalonia.Native": "11.1.0",
+          "Avalonia.Skia": "11.1.0",
+          "Avalonia.Win32": "11.1.0",
+          "Avalonia.X11": "11.1.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Desktop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Desktop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.FreeDesktop/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0",
+          "Tmds.DBus.Protocol": "0.16.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.FreeDesktop.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.FreeDesktop.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Native/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Native.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Native.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Remote.Protocol/11.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Avalonia.Remote.Protocol.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Remote.Protocol.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Skia/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0",
+          "HarfBuzzSharp": "7.3.0.2",
+          "HarfBuzzSharp.NativeAssets.Linux": "7.3.0.2",
+          "HarfBuzzSharp.NativeAssets.WebAssembly": "7.3.0.2",
+          "SkiaSharp": "2.88.8",
+          "SkiaSharp.NativeAssets.Linux": "2.88.8",
+          "SkiaSharp.NativeAssets.WebAssembly": "2.88.8"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Skia.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Skia.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Themes.Fluent/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Themes.Fluent.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Themes.Fluent.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.Win32/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0",
+          "Avalonia.Angle.Windows.Natives": "2.1.22045.20230930",
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.Win32.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Win32.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Avalonia.X11/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Avalonia": "11.1.0",
+          "Avalonia.FreeDesktop": "11.1.0",
+          "Avalonia.Skia": "11.1.0"
+        },
+        "compile": {
+          "lib/net8.0/Avalonia.X11.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.X11.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "HarfBuzzSharp/7.3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp.NativeAssets.Win32": "7.3.0.2",
+          "HarfBuzzSharp.NativeAssets.macOS": "7.3.0.2"
+        },
+        "compile": {
+          "lib/net6.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/HarfBuzzSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Linux/7.3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "7.3.0.2"
+        },
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.macOS/7.3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.WebAssembly/7.3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/netstandard1.0/HarfBuzzSharp.NativeAssets.WebAssembly.props": {},
+          "buildTransitive/netstandard1.0/HarfBuzzSharp.NativeAssets.WebAssembly.targets": {}
+        }
+      },
+      "HarfBuzzSharp.NativeAssets.Win32/7.3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {}
+        }
+      },
+      "MicroCom.Runtime/0.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/MicroCom.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/MicroCom.Runtime.dll": {}
+        }
+      },
+      "Microsoft.NET.ILLink.Tasks/9.0.12": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -360,15 +1023,6 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
-        }
-      },
-      "Microsoft.Web.WebView2/1.0.2651.64": {
-        "type": "package",
-        "native": {
-          "runtimes/win-x64/native/WebView2Loader.dll": {}
-        },
-        "build": {
-          "build/Microsoft.Web.WebView2.targets": {}
         }
       },
       "Microsoft.Win32.Registry/4.7.0": {
@@ -386,123 +1040,6 @@
           "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "Microsoft.Windows.SDK.BuildTools/10.0.26100.1742": {
-        "type": "package",
-        "build": {
-          "buildTransitive/Microsoft.Windows.SDK.BuildTools.props": {},
-          "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets": {}
-        }
-      },
-      "Microsoft.WindowsAppSDK/1.6.250108002": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Web.WebView2": "1.0.2651.64",
-          "Microsoft.Windows.SDK.BuildTools": "10.0.22621.756"
-        },
-        "compile": {
-          "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.WinUI.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppLifecycle.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Builder.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.Resources.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Management.Deployment.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.PushNotifications.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Security.AccessControl.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Storage.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Power.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Widgets.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.WinUI.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppLifecycle.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Builder.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.Resources.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Management.Deployment.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.PushNotifications.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Security.AccessControl.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Storage.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Power.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Widgets.Projection.dll": {
-            "related": ".xml"
-          },
-          "lib/net6.0-windows10.0.18362.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll": {}
-        },
-        "native": {
-          "runtimes/win-x64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {}
-        },
-        "build": {
-          "buildTransitive/Microsoft.WindowsAppSDK.props": {},
-          "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
       "NAudio/2.2.1": {
@@ -624,6 +1161,94 @@
           }
         }
       },
+      "SkiaSharp/2.88.8": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp.NativeAssets.Win32": "2.88.8",
+          "SkiaSharp.NativeAssets.macOS": "2.88.8"
+        },
+        "compile": {
+          "lib/net6.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/SkiaSharp.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Linux/2.88.8": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.8"
+        },
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.macOS/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.WebAssembly/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/netstandard1.0/SkiaSharp.NativeAssets.WebAssembly.props": {},
+          "buildTransitive/netstandard1.0/SkiaSharp.NativeAssets.WebAssembly.targets": {}
+        }
+      },
+      "SkiaSharp.NativeAssets.Win32/2.88.8": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/_._": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/libSkiaSharp.dll": {}
+        }
+      },
+      "System.IO.Pipelines/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
       "System.Security.AccessControl/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -653,10 +1278,601 @@
             "related": ".xml"
           }
         }
+      },
+      "Tmds.DBus.Protocol/0.16.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Pipelines": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Tmds.DBus.Protocol.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Tmds.DBus.Protocol.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Avalonia/11.1.0": {
+      "sha512": "tqD4Az6xnEa5INS0bduGuv0VFIWCxQ/kJT+yBT+KI8TsofJUYMFjc617rBoObEZoTNyIHiV58LBn6sRw/ht65g==",
+      "type": "package",
+      "path": "avalonia/11.1.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "analyzers/dotnet/cs/Avalonia.Analyzers.dll",
+        "analyzers/dotnet/cs/Avalonia.Generators.dll",
+        "avalonia.11.1.0.nupkg.sha512",
+        "avalonia.nuspec",
+        "build/Avalonia.Generators.props",
+        "build/Avalonia.props",
+        "build/Avalonia.targets",
+        "build/AvaloniaBuildTasks.props",
+        "build/AvaloniaBuildTasks.targets",
+        "build/AvaloniaItemSchema.xaml",
+        "build/AvaloniaPrivateApis.targets",
+        "build/AvaloniaRules.Project.xml",
+        "build/AvaloniaVersion.props",
+        "buildTransitive/Avalonia.Generators.props",
+        "buildTransitive/Avalonia.props",
+        "buildTransitive/Avalonia.targets",
+        "buildTransitive/AvaloniaBuildTasks.props",
+        "buildTransitive/AvaloniaBuildTasks.targets",
+        "buildTransitive/AvaloniaItemSchema.xaml",
+        "buildTransitive/AvaloniaPrivateApis.targets",
+        "buildTransitive/AvaloniaRules.Project.xml",
+        "lib/net6.0/Avalonia.Base.dll",
+        "lib/net6.0/Avalonia.Base.xml",
+        "lib/net6.0/Avalonia.Controls.dll",
+        "lib/net6.0/Avalonia.Controls.xml",
+        "lib/net6.0/Avalonia.DesignerSupport.dll",
+        "lib/net6.0/Avalonia.DesignerSupport.xml",
+        "lib/net6.0/Avalonia.Dialogs.dll",
+        "lib/net6.0/Avalonia.Dialogs.xml",
+        "lib/net6.0/Avalonia.Markup.Xaml.dll",
+        "lib/net6.0/Avalonia.Markup.Xaml.xml",
+        "lib/net6.0/Avalonia.Markup.dll",
+        "lib/net6.0/Avalonia.Markup.xml",
+        "lib/net6.0/Avalonia.Metal.dll",
+        "lib/net6.0/Avalonia.Metal.xml",
+        "lib/net6.0/Avalonia.MicroCom.dll",
+        "lib/net6.0/Avalonia.MicroCom.xml",
+        "lib/net6.0/Avalonia.OpenGL.dll",
+        "lib/net6.0/Avalonia.OpenGL.xml",
+        "lib/net6.0/Avalonia.Vulkan.dll",
+        "lib/net6.0/Avalonia.Vulkan.xml",
+        "lib/net6.0/Avalonia.dll",
+        "lib/net6.0/Avalonia.xml",
+        "lib/net8.0/Avalonia.Base.dll",
+        "lib/net8.0/Avalonia.Base.xml",
+        "lib/net8.0/Avalonia.Controls.dll",
+        "lib/net8.0/Avalonia.Controls.xml",
+        "lib/net8.0/Avalonia.DesignerSupport.dll",
+        "lib/net8.0/Avalonia.DesignerSupport.xml",
+        "lib/net8.0/Avalonia.Dialogs.dll",
+        "lib/net8.0/Avalonia.Dialogs.xml",
+        "lib/net8.0/Avalonia.Markup.Xaml.dll",
+        "lib/net8.0/Avalonia.Markup.Xaml.xml",
+        "lib/net8.0/Avalonia.Markup.dll",
+        "lib/net8.0/Avalonia.Markup.xml",
+        "lib/net8.0/Avalonia.Metal.dll",
+        "lib/net8.0/Avalonia.Metal.xml",
+        "lib/net8.0/Avalonia.MicroCom.dll",
+        "lib/net8.0/Avalonia.MicroCom.xml",
+        "lib/net8.0/Avalonia.OpenGL.dll",
+        "lib/net8.0/Avalonia.OpenGL.xml",
+        "lib/net8.0/Avalonia.Vulkan.dll",
+        "lib/net8.0/Avalonia.Vulkan.xml",
+        "lib/net8.0/Avalonia.dll",
+        "lib/net8.0/Avalonia.xml",
+        "lib/netstandard2.0/Avalonia.Base.dll",
+        "lib/netstandard2.0/Avalonia.Base.xml",
+        "lib/netstandard2.0/Avalonia.Controls.dll",
+        "lib/netstandard2.0/Avalonia.Controls.xml",
+        "lib/netstandard2.0/Avalonia.DesignerSupport.dll",
+        "lib/netstandard2.0/Avalonia.DesignerSupport.xml",
+        "lib/netstandard2.0/Avalonia.Dialogs.dll",
+        "lib/netstandard2.0/Avalonia.Dialogs.xml",
+        "lib/netstandard2.0/Avalonia.Markup.Xaml.dll",
+        "lib/netstandard2.0/Avalonia.Markup.Xaml.xml",
+        "lib/netstandard2.0/Avalonia.Markup.dll",
+        "lib/netstandard2.0/Avalonia.Markup.xml",
+        "lib/netstandard2.0/Avalonia.Metal.dll",
+        "lib/netstandard2.0/Avalonia.Metal.xml",
+        "lib/netstandard2.0/Avalonia.MicroCom.dll",
+        "lib/netstandard2.0/Avalonia.MicroCom.xml",
+        "lib/netstandard2.0/Avalonia.OpenGL.dll",
+        "lib/netstandard2.0/Avalonia.OpenGL.xml",
+        "lib/netstandard2.0/Avalonia.Vulkan.dll",
+        "lib/netstandard2.0/Avalonia.Vulkan.xml",
+        "lib/netstandard2.0/Avalonia.dll",
+        "lib/netstandard2.0/Avalonia.xml",
+        "ref/net6.0/Avalonia.Base.dll",
+        "ref/net6.0/Avalonia.Base.xml",
+        "ref/net6.0/Avalonia.Controls.dll",
+        "ref/net6.0/Avalonia.Controls.xml",
+        "ref/net6.0/Avalonia.DesignerSupport.dll",
+        "ref/net6.0/Avalonia.DesignerSupport.xml",
+        "ref/net6.0/Avalonia.Dialogs.dll",
+        "ref/net6.0/Avalonia.Dialogs.xml",
+        "ref/net6.0/Avalonia.Markup.Xaml.dll",
+        "ref/net6.0/Avalonia.Markup.Xaml.xml",
+        "ref/net6.0/Avalonia.Markup.dll",
+        "ref/net6.0/Avalonia.Markup.xml",
+        "ref/net6.0/Avalonia.Metal.dll",
+        "ref/net6.0/Avalonia.Metal.xml",
+        "ref/net6.0/Avalonia.MicroCom.dll",
+        "ref/net6.0/Avalonia.MicroCom.xml",
+        "ref/net6.0/Avalonia.OpenGL.dll",
+        "ref/net6.0/Avalonia.OpenGL.xml",
+        "ref/net6.0/Avalonia.Vulkan.dll",
+        "ref/net6.0/Avalonia.Vulkan.xml",
+        "ref/net6.0/Avalonia.dll",
+        "ref/net6.0/Avalonia.xml",
+        "ref/net8.0/Avalonia.Base.dll",
+        "ref/net8.0/Avalonia.Base.xml",
+        "ref/net8.0/Avalonia.Controls.dll",
+        "ref/net8.0/Avalonia.Controls.xml",
+        "ref/net8.0/Avalonia.DesignerSupport.dll",
+        "ref/net8.0/Avalonia.DesignerSupport.xml",
+        "ref/net8.0/Avalonia.Dialogs.dll",
+        "ref/net8.0/Avalonia.Dialogs.xml",
+        "ref/net8.0/Avalonia.Markup.Xaml.dll",
+        "ref/net8.0/Avalonia.Markup.Xaml.xml",
+        "ref/net8.0/Avalonia.Markup.dll",
+        "ref/net8.0/Avalonia.Markup.xml",
+        "ref/net8.0/Avalonia.Metal.dll",
+        "ref/net8.0/Avalonia.Metal.xml",
+        "ref/net8.0/Avalonia.MicroCom.dll",
+        "ref/net8.0/Avalonia.MicroCom.xml",
+        "ref/net8.0/Avalonia.OpenGL.dll",
+        "ref/net8.0/Avalonia.OpenGL.xml",
+        "ref/net8.0/Avalonia.Vulkan.dll",
+        "ref/net8.0/Avalonia.Vulkan.xml",
+        "ref/net8.0/Avalonia.dll",
+        "ref/net8.0/Avalonia.xml",
+        "ref/netstandard2.0/Avalonia.Base.dll",
+        "ref/netstandard2.0/Avalonia.Base.xml",
+        "ref/netstandard2.0/Avalonia.Controls.dll",
+        "ref/netstandard2.0/Avalonia.Controls.xml",
+        "ref/netstandard2.0/Avalonia.DesignerSupport.dll",
+        "ref/netstandard2.0/Avalonia.DesignerSupport.xml",
+        "ref/netstandard2.0/Avalonia.Dialogs.dll",
+        "ref/netstandard2.0/Avalonia.Dialogs.xml",
+        "ref/netstandard2.0/Avalonia.Markup.Xaml.dll",
+        "ref/netstandard2.0/Avalonia.Markup.Xaml.xml",
+        "ref/netstandard2.0/Avalonia.Markup.dll",
+        "ref/netstandard2.0/Avalonia.Markup.xml",
+        "ref/netstandard2.0/Avalonia.Metal.dll",
+        "ref/netstandard2.0/Avalonia.Metal.xml",
+        "ref/netstandard2.0/Avalonia.MicroCom.dll",
+        "ref/netstandard2.0/Avalonia.MicroCom.xml",
+        "ref/netstandard2.0/Avalonia.OpenGL.dll",
+        "ref/netstandard2.0/Avalonia.OpenGL.xml",
+        "ref/netstandard2.0/Avalonia.Vulkan.dll",
+        "ref/netstandard2.0/Avalonia.Vulkan.xml",
+        "ref/netstandard2.0/Avalonia.dll",
+        "ref/netstandard2.0/Avalonia.xml",
+        "tools/net461/designer/Avalonia.Designer.HostApp.exe",
+        "tools/netstandard2.0/Avalonia.Build.Tasks.dll",
+        "tools/netstandard2.0/designer/Avalonia.Designer.HostApp.dll"
+      ]
+    },
+    "Avalonia.Angle.Windows.Natives/2.1.22045.20230930": {
+      "sha512": "Bo3qOhKC1b84BIhiogndMdAzB3UrrESKK7hS769f5HWeoMw/pcd42US5KFYW2JJ4ZSTrXnP8mXwLTMzh+S+9Lg==",
+      "type": "package",
+      "path": "avalonia.angle.windows.natives/2.1.22045.20230930",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE",
+        "avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",
+        "avalonia.angle.windows.natives.nuspec",
+        "runtimes/win-arm64/native/av_libglesv2.dll",
+        "runtimes/win-x64/native/av_libglesv2.dll",
+        "runtimes/win-x86/native/av_libglesv2.dll"
+      ]
+    },
+    "Avalonia.BuildServices/0.0.29": {
+      "sha512": "U4eJLQdoDNHXtEba7MZUCwrBErBTxFp6sUewXBOdAhU0Kwzwaa/EKFcYm8kpcysjzKtfB4S0S9n0uxKZFz/ikw==",
+      "type": "package",
+      "path": "avalonia.buildservices/0.0.29",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "avalonia.buildservices.0.0.29.nupkg.sha512",
+        "avalonia.buildservices.nuspec",
+        "build/Avalonia.BuildServices.targets",
+        "buildTransitive/Avalonia.BuildServices.targets",
+        "tools/netstandard2.0/Avalonia.BuildServices.Collector.dll",
+        "tools/netstandard2.0/Avalonia.BuildServices.dll",
+        "tools/netstandard2.0/runtimeconfig.json"
+      ]
+    },
+    "Avalonia.Desktop/11.1.0": {
+      "sha512": "HROfSizLEI6XoFIRrlpOTvEkXO1VER67jroUCMMGh9WpqZt81SeQkooAUpCiKXKzuWnjjHAlEw8pNy0eLdlSwQ==",
+      "type": "package",
+      "path": "avalonia.desktop/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.desktop.11.1.0.nupkg.sha512",
+        "avalonia.desktop.nuspec",
+        "lib/net6.0/Avalonia.Desktop.dll",
+        "lib/net6.0/Avalonia.Desktop.xml",
+        "lib/net8.0/Avalonia.Desktop.dll",
+        "lib/net8.0/Avalonia.Desktop.xml",
+        "lib/netstandard2.0/Avalonia.Desktop.dll",
+        "lib/netstandard2.0/Avalonia.Desktop.xml"
+      ]
+    },
+    "Avalonia.FreeDesktop/11.1.0": {
+      "sha512": "FY7QFmsMcmlMIDejSGCQeqYOUbK2NizLFAZ6tLRt223HLdUPicKjce5o2HNuAgP1J2kfpFG4CgbXu9bjv5gmfQ==",
+      "type": "package",
+      "path": "avalonia.freedesktop/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.freedesktop.11.1.0.nupkg.sha512",
+        "avalonia.freedesktop.nuspec",
+        "lib/net6.0/Avalonia.FreeDesktop.dll",
+        "lib/net6.0/Avalonia.FreeDesktop.xml",
+        "lib/net8.0/Avalonia.FreeDesktop.dll",
+        "lib/net8.0/Avalonia.FreeDesktop.xml",
+        "lib/netstandard2.0/Avalonia.FreeDesktop.dll",
+        "lib/netstandard2.0/Avalonia.FreeDesktop.xml"
+      ]
+    },
+    "Avalonia.Native/11.1.0": {
+      "sha512": "HVe1HwOfwL7GG8UaUTUYqTP7007Ja6WxP65DG46q7j60kWkg5oomeRHW+Xm4mGd+H1ye5Q9fi1okg+sG24PgFQ==",
+      "type": "package",
+      "path": "avalonia.native/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.native.11.1.0.nupkg.sha512",
+        "avalonia.native.nuspec",
+        "lib/net6.0/Avalonia.Native.dll",
+        "lib/net6.0/Avalonia.Native.xml",
+        "lib/net8.0/Avalonia.Native.dll",
+        "lib/net8.0/Avalonia.Native.xml",
+        "lib/netstandard2.0/Avalonia.Native.dll",
+        "lib/netstandard2.0/Avalonia.Native.xml",
+        "runtimes/osx/native/libAvaloniaNative.dylib"
+      ]
+    },
+    "Avalonia.Remote.Protocol/11.1.0": {
+      "sha512": "Jgv470tVeZRwLwivNGdcdEyQdWhe3bsDF0931L1PvvnLGotMaUPh6cvVZDRwLv7BVues+EA8e5wsicVATl6vMQ==",
+      "type": "package",
+      "path": "avalonia.remote.protocol/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.remote.protocol.11.1.0.nupkg.sha512",
+        "avalonia.remote.protocol.nuspec",
+        "lib/net6.0/Avalonia.Remote.Protocol.dll",
+        "lib/net6.0/Avalonia.Remote.Protocol.xml",
+        "lib/net8.0/Avalonia.Remote.Protocol.dll",
+        "lib/net8.0/Avalonia.Remote.Protocol.xml",
+        "lib/netstandard2.0/Avalonia.Remote.Protocol.dll",
+        "lib/netstandard2.0/Avalonia.Remote.Protocol.xml"
+      ]
+    },
+    "Avalonia.Skia/11.1.0": {
+      "sha512": "vmcQx2o3u4kbjtjx9KL+eyB42TwtX46PXNZvxjOwgPQgmL/jSv4CJsRySMDCIGxMLih2qKOJXOjcKXnp2+pDeg==",
+      "type": "package",
+      "path": "avalonia.skia/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.skia.11.1.0.nupkg.sha512",
+        "avalonia.skia.nuspec",
+        "lib/net6.0/Avalonia.Skia.dll",
+        "lib/net6.0/Avalonia.Skia.xml",
+        "lib/net8.0/Avalonia.Skia.dll",
+        "lib/net8.0/Avalonia.Skia.xml",
+        "lib/netstandard2.0/Avalonia.Skia.dll",
+        "lib/netstandard2.0/Avalonia.Skia.xml"
+      ]
+    },
+    "Avalonia.Themes.Fluent/11.1.0": {
+      "sha512": "GL8sOjDajxZANeZfyP3oCAepy1FfXSVc5L3PtWvCDPyrA9YeNonZuOtWy8TPT+iK8i3UzLUgmCsTTpHENB3WDQ==",
+      "type": "package",
+      "path": "avalonia.themes.fluent/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.themes.fluent.11.1.0.nupkg.sha512",
+        "avalonia.themes.fluent.nuspec",
+        "lib/net6.0/Avalonia.Themes.Fluent.dll",
+        "lib/net6.0/Avalonia.Themes.Fluent.xml",
+        "lib/net8.0/Avalonia.Themes.Fluent.dll",
+        "lib/net8.0/Avalonia.Themes.Fluent.xml",
+        "lib/netstandard2.0/Avalonia.Themes.Fluent.dll",
+        "lib/netstandard2.0/Avalonia.Themes.Fluent.xml"
+      ]
+    },
+    "Avalonia.Win32/11.1.0": {
+      "sha512": "M2TZaijlaZrxqVVr6IfIZ20pOJc3Ng/4KaXeMnyWCWw2g0xNW1HMo4wICt9YIGf3b6aCw9EcSW1p22Caa20uZQ==",
+      "type": "package",
+      "path": "avalonia.win32/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.win32.11.1.0.nupkg.sha512",
+        "avalonia.win32.nuspec",
+        "lib/net6.0/Avalonia.Win32.dll",
+        "lib/net6.0/Avalonia.Win32.xml",
+        "lib/net8.0/Avalonia.Win32.dll",
+        "lib/net8.0/Avalonia.Win32.xml",
+        "lib/netstandard2.0/Avalonia.Win32.dll",
+        "lib/netstandard2.0/Avalonia.Win32.xml"
+      ]
+    },
+    "Avalonia.X11/11.1.0": {
+      "sha512": "LaDcOYi/JiXHq6cfwP2+sFknu7dBJcE9QGWniHVwC69gieRgtsw1L4Kd0beYJO873zVFzWYAp06H+m6zcqoTQw==",
+      "type": "package",
+      "path": "avalonia.x11/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "avalonia.x11.11.1.0.nupkg.sha512",
+        "avalonia.x11.nuspec",
+        "lib/net6.0/Avalonia.X11.dll",
+        "lib/net6.0/Avalonia.X11.xml",
+        "lib/net8.0/Avalonia.X11.dll",
+        "lib/net8.0/Avalonia.X11.xml",
+        "lib/netstandard2.0/Avalonia.X11.dll",
+        "lib/netstandard2.0/Avalonia.X11.xml"
+      ]
+    },
+    "HarfBuzzSharp/7.3.0.2": {
+      "sha512": "0tCd6HyCmNsX/DniCp2b00fo0xPbdNwKOs9BxxyT8oOOuMlWjcSFwzONKyeckCKVBFEsbSmsAHPDTqxoSDwZMg==",
+      "type": "package",
+      "path": "harfbuzzsharp/7.3.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "harfbuzzsharp.7.3.0.2.nupkg.sha512",
+        "harfbuzzsharp.nuspec",
+        "lib/monoandroid1.0/HarfBuzzSharp.dll",
+        "lib/monoandroid1.0/HarfBuzzSharp.pdb",
+        "lib/monoandroid1.0/HarfBuzzSharp.xml",
+        "lib/net462/HarfBuzzSharp.dll",
+        "lib/net462/HarfBuzzSharp.pdb",
+        "lib/net462/HarfBuzzSharp.xml",
+        "lib/net6.0-android30.0/HarfBuzzSharp.dll",
+        "lib/net6.0-android30.0/HarfBuzzSharp.pdb",
+        "lib/net6.0-android30.0/HarfBuzzSharp.xml",
+        "lib/net6.0-ios13.6/HarfBuzzSharp.dll",
+        "lib/net6.0-ios13.6/HarfBuzzSharp.pdb",
+        "lib/net6.0-ios13.6/HarfBuzzSharp.xml",
+        "lib/net6.0-maccatalyst13.5/HarfBuzzSharp.dll",
+        "lib/net6.0-maccatalyst13.5/HarfBuzzSharp.pdb",
+        "lib/net6.0-maccatalyst13.5/HarfBuzzSharp.xml",
+        "lib/net6.0-macos10.15/HarfBuzzSharp.dll",
+        "lib/net6.0-macos10.15/HarfBuzzSharp.pdb",
+        "lib/net6.0-macos10.15/HarfBuzzSharp.xml",
+        "lib/net6.0-tvos13.4/HarfBuzzSharp.dll",
+        "lib/net6.0-tvos13.4/HarfBuzzSharp.pdb",
+        "lib/net6.0-tvos13.4/HarfBuzzSharp.xml",
+        "lib/net6.0/HarfBuzzSharp.dll",
+        "lib/net6.0/HarfBuzzSharp.pdb",
+        "lib/net6.0/HarfBuzzSharp.xml",
+        "lib/netcoreapp3.1/HarfBuzzSharp.dll",
+        "lib/netcoreapp3.1/HarfBuzzSharp.pdb",
+        "lib/netcoreapp3.1/HarfBuzzSharp.xml",
+        "lib/netstandard1.3/HarfBuzzSharp.dll",
+        "lib/netstandard1.3/HarfBuzzSharp.pdb",
+        "lib/netstandard1.3/HarfBuzzSharp.xml",
+        "lib/netstandard2.0/HarfBuzzSharp.dll",
+        "lib/netstandard2.0/HarfBuzzSharp.pdb",
+        "lib/netstandard2.0/HarfBuzzSharp.xml",
+        "lib/netstandard2.1/HarfBuzzSharp.dll",
+        "lib/netstandard2.1/HarfBuzzSharp.pdb",
+        "lib/netstandard2.1/HarfBuzzSharp.xml",
+        "lib/tizen40/HarfBuzzSharp.dll",
+        "lib/tizen40/HarfBuzzSharp.pdb",
+        "lib/tizen40/HarfBuzzSharp.xml",
+        "lib/uap10.0.10240/HarfBuzzSharp.dll",
+        "lib/uap10.0.10240/HarfBuzzSharp.pdb",
+        "lib/uap10.0.10240/HarfBuzzSharp.xml",
+        "lib/uap10.0.16299/HarfBuzzSharp.dll",
+        "lib/uap10.0.16299/HarfBuzzSharp.pdb",
+        "lib/uap10.0.16299/HarfBuzzSharp.xml",
+        "lib/xamarinios1.0/HarfBuzzSharp.dll",
+        "lib/xamarinios1.0/HarfBuzzSharp.pdb",
+        "lib/xamarinios1.0/HarfBuzzSharp.xml",
+        "lib/xamarinmac2.0/HarfBuzzSharp.dll",
+        "lib/xamarinmac2.0/HarfBuzzSharp.pdb",
+        "lib/xamarinmac2.0/HarfBuzzSharp.xml",
+        "lib/xamarintvos1.0/HarfBuzzSharp.dll",
+        "lib/xamarintvos1.0/HarfBuzzSharp.pdb",
+        "lib/xamarintvos1.0/HarfBuzzSharp.xml",
+        "lib/xamarinwatchos1.0/HarfBuzzSharp.dll",
+        "lib/xamarinwatchos1.0/HarfBuzzSharp.pdb",
+        "lib/xamarinwatchos1.0/HarfBuzzSharp.xml"
+      ]
+    },
+    "HarfBuzzSharp.NativeAssets.Linux/7.3.0.2": {
+      "sha512": "aKa5J1RqjXKAtdcZJp5wjC78klfBIzJHM6CneN76lFmQ9LLRJA9Oa0TkIDaV8lVLDKMAy5fCKHXFlXUK1YfL/g==",
+      "type": "package",
+      "path": "harfbuzzsharp.nativeassets.linux/7.3.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/HarfBuzzSharp.NativeAssets.Linux.targets",
+        "buildTransitive/net462/HarfBuzzSharp.NativeAssets.Linux.targets",
+        "harfbuzzsharp.nativeassets.linux.7.3.0.2.nupkg.sha512",
+        "harfbuzzsharp.nativeassets.linux.nuspec",
+        "lib/net462/_._",
+        "lib/net6.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard1.3/_._",
+        "runtimes/linux-arm/native/libHarfBuzzSharp.so",
+        "runtimes/linux-arm64/native/libHarfBuzzSharp.so",
+        "runtimes/linux-musl-x64/native/libHarfBuzzSharp.so",
+        "runtimes/linux-x64/native/libHarfBuzzSharp.so"
+      ]
+    },
+    "HarfBuzzSharp.NativeAssets.macOS/7.3.0.2": {
+      "sha512": "nycYH/WLJ6ogm+I+QSFCdPJsdxSb5GANWYbQyp1vsd/KjXN56RVUJWPhbgP2GKb/Y7mrsHM7EProqVXlO/EMsA==",
+      "type": "package",
+      "path": "harfbuzzsharp.nativeassets.macos/7.3.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/HarfBuzzSharp.NativeAssets.macOS.targets",
+        "build/net6.0-macos10.15/HarfBuzzSharp.NativeAssets.macOS.targets",
+        "build/xamarinmac2.0/HarfBuzzSharp.NativeAssets.macOS.targets",
+        "buildTransitive/net462/HarfBuzzSharp.NativeAssets.macOS.targets",
+        "buildTransitive/net6.0-macos10.15/HarfBuzzSharp.NativeAssets.macOS.targets",
+        "buildTransitive/xamarinmac2.0/HarfBuzzSharp.NativeAssets.macOS.targets",
+        "harfbuzzsharp.nativeassets.macos.7.3.0.2.nupkg.sha512",
+        "harfbuzzsharp.nativeassets.macos.nuspec",
+        "lib/net462/_._",
+        "lib/net6.0-macos10.15/_._",
+        "lib/net6.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard1.3/_._",
+        "lib/xamarinmac2.0/_._",
+        "runtimes/osx/native/libHarfBuzzSharp.dylib"
+      ]
+    },
+    "HarfBuzzSharp.NativeAssets.WebAssembly/7.3.0.2": {
+      "sha512": "pR6H16NOAjIhfXomYsgN5anGbOHSfIA8z0RoWEVx8vgLySxz9Jie4DnQ/paWTh5MTtBC8XKkTUI7uKMXcq/Pxw==",
+      "type": "package",
+      "path": "harfbuzzsharp.nativeassets.webassembly/7.3.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/netstandard1.0/HarfBuzzSharp.NativeAssets.WebAssembly.props",
+        "build/netstandard1.0/HarfBuzzSharp.NativeAssets.WebAssembly.targets",
+        "build/netstandard1.0/libHarfBuzzSharp.a/2.0.23/libHarfBuzzSharp.a",
+        "build/netstandard1.0/libHarfBuzzSharp.a/2.0.6/libHarfBuzzSharp.a",
+        "build/netstandard1.0/libHarfBuzzSharp.a/3.1.12/mt,simd/libHarfBuzzSharp.a",
+        "build/netstandard1.0/libHarfBuzzSharp.a/3.1.12/mt/libHarfBuzzSharp.a",
+        "build/netstandard1.0/libHarfBuzzSharp.a/3.1.12/simd/libHarfBuzzSharp.a",
+        "build/netstandard1.0/libHarfBuzzSharp.a/3.1.12/st/libHarfBuzzSharp.a",
+        "build/netstandard1.0/libHarfBuzzSharp.a/3.1.34/mt/libHarfBuzzSharp.a",
+        "build/netstandard1.0/libHarfBuzzSharp.a/3.1.34/simd,mt/libHarfBuzzSharp.a",
+        "build/netstandard1.0/libHarfBuzzSharp.a/3.1.34/simd,st/libHarfBuzzSharp.a",
+        "build/netstandard1.0/libHarfBuzzSharp.a/3.1.34/st/libHarfBuzzSharp.a",
+        "build/netstandard1.0/libHarfBuzzSharp.a/3.1.7/libHarfBuzzSharp.a",
+        "buildTransitive/netstandard1.0/HarfBuzzSharp.NativeAssets.WebAssembly.props",
+        "buildTransitive/netstandard1.0/HarfBuzzSharp.NativeAssets.WebAssembly.targets",
+        "harfbuzzsharp.nativeassets.webassembly.7.3.0.2.nupkg.sha512",
+        "harfbuzzsharp.nativeassets.webassembly.nuspec",
+        "lib/netstandard1.0/_._"
+      ]
+    },
+    "HarfBuzzSharp.NativeAssets.Win32/7.3.0.2": {
+      "sha512": "DpF9JBzwws2dupOLnjME65hxQWWbN/GD40AoTkwB4S05WANvxo3n81AnQJKxWDCnrWfWhLPB36OF27TvEqzb/A==",
+      "type": "package",
+      "path": "harfbuzzsharp.nativeassets.win32/7.3.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/HarfBuzzSharp.NativeAssets.Win32.targets",
+        "buildTransitive/net462/HarfBuzzSharp.NativeAssets.Win32.targets",
+        "harfbuzzsharp.nativeassets.win32.7.3.0.2.nupkg.sha512",
+        "harfbuzzsharp.nativeassets.win32.nuspec",
+        "lib/net462/_._",
+        "lib/net6.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard1.3/_._",
+        "runtimes/win-arm64/native/libHarfBuzzSharp.dll",
+        "runtimes/win-x64/native/libHarfBuzzSharp.dll",
+        "runtimes/win-x86/native/libHarfBuzzSharp.dll"
+      ]
+    },
+    "MicroCom.Runtime/0.11.0": {
+      "sha512": "MEnrZ3UIiH40hjzMDsxrTyi8dtqB5ziv3iBeeU4bXsL/7NLSal9F1lZKpK+tfBRnUoDSdtcW3KufE4yhATOMCA==",
+      "type": "package",
+      "path": "microcom.runtime/0.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/MicroCom.Runtime.dll",
+        "lib/netstandard2.0/MicroCom.Runtime.dll",
+        "microcom.runtime.0.11.0.nupkg.sha512",
+        "microcom.runtime.nuspec"
+      ]
+    },
+    "Microsoft.NET.ILLink.Tasks/9.0.12": {
+      "sha512": "StA3kyImQHqDo8A8ZHaSxgASbEuT5UIqgeCvK5SzUPj//xE1QSys421J9pEs4cYuIVwq7CJvWSKxtyH7aPr1LA==",
+      "type": "package",
+      "path": "microsoft.net.illink.tasks/9.0.12",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "Sdk/Sdk.props",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/cs/ILLink.CodeFixProvider.dll",
+        "analyzers/dotnet/cs/ILLink.RoslynAnalyzer.dll",
+        "build/Microsoft.NET.ILLink.Analyzers.props",
+        "build/Microsoft.NET.ILLink.Tasks.props",
+        "build/Microsoft.NET.ILLink.targets",
+        "microsoft.net.illink.tasks.9.0.12.nupkg.sha512",
+        "microsoft.net.illink.tasks.nuspec",
+        "tools/net472/ILLink.Tasks.dll",
+        "tools/net472/ILLink.Tasks.dll.config",
+        "tools/net472/Mono.Cecil.Mdb.dll",
+        "tools/net472/Mono.Cecil.Pdb.dll",
+        "tools/net472/Mono.Cecil.Rocks.dll",
+        "tools/net472/Mono.Cecil.dll",
+        "tools/net472/Sdk/Sdk.props",
+        "tools/net472/System.Buffers.dll",
+        "tools/net472/System.Collections.Immutable.dll",
+        "tools/net472/System.Memory.dll",
+        "tools/net472/System.Numerics.Vectors.dll",
+        "tools/net472/System.Reflection.Metadata.dll",
+        "tools/net472/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/net472/build/Microsoft.NET.ILLink.Analyzers.props",
+        "tools/net472/build/Microsoft.NET.ILLink.Tasks.props",
+        "tools/net472/build/Microsoft.NET.ILLink.targets",
+        "tools/net9.0/ILLink.Tasks.deps.json",
+        "tools/net9.0/ILLink.Tasks.dll",
+        "tools/net9.0/Mono.Cecil.Mdb.dll",
+        "tools/net9.0/Mono.Cecil.Pdb.dll",
+        "tools/net9.0/Mono.Cecil.Rocks.dll",
+        "tools/net9.0/Mono.Cecil.dll",
+        "tools/net9.0/Sdk/Sdk.props",
+        "tools/net9.0/build/Microsoft.NET.ILLink.Analyzers.props",
+        "tools/net9.0/build/Microsoft.NET.ILLink.Tasks.props",
+        "tools/net9.0/build/Microsoft.NET.ILLink.targets",
+        "tools/net9.0/illink.deps.json",
+        "tools/net9.0/illink.dll",
+        "tools/net9.0/illink.runtimeconfig.json",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "type": "package",
@@ -672,99 +1888,6 @@
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "Microsoft.Web.WebView2/1.0.2651.64": {
-      "sha512": "f5sc/vcAoTCTEW7Nqzp4galAuTRguZViw8ksn+Nx2uskEBPm0/ubzy6gVjvXS/P96jLS89C8T9I0hPc417xpNg==",
-      "type": "package",
-      "path": "microsoft.web.webview2/1.0.2651.64",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "NOTICE.txt",
-        "WebView2.idl",
-        "WebView2.tlb",
-        "build/Common.targets",
-        "build/Microsoft.Web.WebView2.targets",
-        "build/WebView2Rules.Project.xml",
-        "build/native/Microsoft.Web.WebView2.targets",
-        "build/native/arm64/WebView2Loader.dll",
-        "build/native/arm64/WebView2Loader.dll.lib",
-        "build/native/arm64/WebView2LoaderStatic.lib",
-        "build/native/include-winrt/WebView2Interop.h",
-        "build/native/include-winrt/WebView2Interop.idl",
-        "build/native/include-winrt/WebView2Interop.tlb",
-        "build/native/include/WebView2.h",
-        "build/native/include/WebView2EnvironmentOptions.h",
-        "build/native/x64/WebView2Loader.dll",
-        "build/native/x64/WebView2Loader.dll.lib",
-        "build/native/x64/WebView2LoaderStatic.lib",
-        "build/native/x86/WebView2Loader.dll",
-        "build/native/x86/WebView2Loader.dll.lib",
-        "build/native/x86/WebView2LoaderStatic.lib",
-        "build/wv2winrt.targets",
-        "lib/Microsoft.Web.WebView2.Core.winmd",
-        "lib/net462/Microsoft.Web.WebView2.Core.dll",
-        "lib/net462/Microsoft.Web.WebView2.Core.xml",
-        "lib/net462/Microsoft.Web.WebView2.WinForms.dll",
-        "lib/net462/Microsoft.Web.WebView2.WinForms.xml",
-        "lib/net462/Microsoft.Web.WebView2.Wpf.dll",
-        "lib/net462/Microsoft.Web.WebView2.Wpf.xml",
-        "lib_manual/net6.0-windows10.0.17763.0/Microsoft.Web.WebView2.Core.Projection.dll",
-        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll",
-        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Core.xml",
-        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll",
-        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.xml",
-        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
-        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.xml",
-        "microsoft.web.webview2.1.0.2651.64.nupkg.sha512",
-        "microsoft.web.webview2.nuspec",
-        "runtimes/win-arm64/native/WebView2Loader.dll",
-        "runtimes/win-arm64/native_uap/Microsoft.Web.WebView2.Core.dll",
-        "runtimes/win-x64/native/WebView2Loader.dll",
-        "runtimes/win-x64/native_uap/Microsoft.Web.WebView2.Core.dll",
-        "runtimes/win-x86/native/WebView2Loader.dll",
-        "runtimes/win-x86/native_uap/Microsoft.Web.WebView2.Core.dll",
-        "tools/VisualStudioToolsManifest.xml",
-        "tools/wv2winrt/Antlr3.Runtime.dll",
-        "tools/wv2winrt/Antlr4.StringTemplate.dll",
-        "tools/wv2winrt/System.Buffers.dll",
-        "tools/wv2winrt/System.CommandLine.DragonFruit.dll",
-        "tools/wv2winrt/System.CommandLine.Rendering.dll",
-        "tools/wv2winrt/System.CommandLine.dll",
-        "tools/wv2winrt/System.Memory.dll",
-        "tools/wv2winrt/System.Numerics.Vectors.dll",
-        "tools/wv2winrt/System.Runtime.CompilerServices.Unsafe.dll",
-        "tools/wv2winrt/codegen_util.dll",
-        "tools/wv2winrt/concrt140_app.dll",
-        "tools/wv2winrt/cs/System.CommandLine.resources.dll",
-        "tools/wv2winrt/de/System.CommandLine.resources.dll",
-        "tools/wv2winrt/es/System.CommandLine.resources.dll",
-        "tools/wv2winrt/fr/System.CommandLine.resources.dll",
-        "tools/wv2winrt/it/System.CommandLine.resources.dll",
-        "tools/wv2winrt/ja/System.CommandLine.resources.dll",
-        "tools/wv2winrt/ko/System.CommandLine.resources.dll",
-        "tools/wv2winrt/msvcp140_1_app.dll",
-        "tools/wv2winrt/msvcp140_2_app.dll",
-        "tools/wv2winrt/msvcp140_app.dll",
-        "tools/wv2winrt/pl/System.CommandLine.resources.dll",
-        "tools/wv2winrt/pt-BR/System.CommandLine.resources.dll",
-        "tools/wv2winrt/ru/System.CommandLine.resources.dll",
-        "tools/wv2winrt/tr/System.CommandLine.resources.dll",
-        "tools/wv2winrt/type_hierarchy.dll",
-        "tools/wv2winrt/vcamp140_app.dll",
-        "tools/wv2winrt/vccorlib140_app.dll",
-        "tools/wv2winrt/vcomp140_app.dll",
-        "tools/wv2winrt/vcruntime140_app.dll",
-        "tools/wv2winrt/winrt_winmd.dll",
-        "tools/wv2winrt/winrt_winmd.winmd",
-        "tools/wv2winrt/wv2winrt.exe",
-        "tools/wv2winrt/wv2winrt.exe.config",
-        "tools/wv2winrt/wv2winrt.xml",
-        "tools/wv2winrt/zh-Hans/System.CommandLine.resources.dll",
-        "tools/wv2winrt/zh-Hant/System.CommandLine.resources.dll"
       ]
     },
     "Microsoft.Win32.Registry/4.7.0": {
@@ -812,656 +1935,6 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "Microsoft.Windows.SDK.BuildTools/10.0.26100.1742": {
-      "sha512": "ypcHjr4KEi6xQhgClnbXoANHcyyX/QsC4Rky4igs6M4GiDa+weegPo8JuV/VMxqrZCV4zlqDsp2krgkN7ReAAg==",
-      "type": "package",
-      "path": "microsoft.windows.sdk.buildtools/10.0.26100.1742",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "bin/10.0.26100.0/arm64/AccChecker/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.26100.0/arm64/ComparePackage.exe",
-        "bin/10.0.26100.0/arm64/DeployUtil.exe",
-        "bin/10.0.26100.0/arm64/MakeCert.exe",
-        "bin/10.0.26100.0/arm64/Microsoft.ComparePackage.Lib.dll",
-        "bin/10.0.26100.0/arm64/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.26100.0/arm64/Microsoft.PackageEditor.Lib.dll",
-        "bin/10.0.26100.0/arm64/Microsoft.Tools.Connectivity.dll",
-        "bin/10.0.26100.0/arm64/Microsoft.Tools.Deploy.dll",
-        "bin/10.0.26100.0/arm64/Microsoft.Windows.Build.Appx.AppxPackaging.dll.manifest",
-        "bin/10.0.26100.0/arm64/Microsoft.Windows.Build.Appx.AppxSip.dll.manifest",
-        "bin/10.0.26100.0/arm64/Microsoft.Windows.Build.Appx.OpcServices.dll.manifest",
-        "bin/10.0.26100.0/arm64/Microsoft.Windows.Build.Signing.mssign32.dll.manifest",
-        "bin/10.0.26100.0/arm64/Microsoft.Windows.Build.Signing.wintrust.dll.manifest",
-        "bin/10.0.26100.0/arm64/PackageEditor.exe",
-        "bin/10.0.26100.0/arm64/ServicingCommon.dll",
-        "bin/10.0.26100.0/arm64/SirepClient.assembly.manifest",
-        "bin/10.0.26100.0/arm64/SirepClient.dll",
-        "bin/10.0.26100.0/arm64/SirepInterop.dll",
-        "bin/10.0.26100.0/arm64/SshClient.dll",
-        "bin/10.0.26100.0/arm64/WinAppDeployCmd.exe",
-        "bin/10.0.26100.0/arm64/WinAppDeployCommon.dll",
-        "bin/10.0.26100.0/arm64/appxpackaging.dll",
-        "bin/10.0.26100.0/arm64/appxsip.dll",
-        "bin/10.0.26100.0/arm64/en-US/AppxPackaging.dll.mui",
-        "bin/10.0.26100.0/arm64/en/Microsoft.Tools.Deploy.resources.dll",
-        "bin/10.0.26100.0/arm64/en/WinAppDeployCmd.resources.dll",
-        "bin/10.0.26100.0/arm64/ipoverusb.discoverpartners.dll",
-        "bin/10.0.26100.0/arm64/makeappx.exe",
-        "bin/10.0.26100.0/arm64/makecat.exe",
-        "bin/10.0.26100.0/arm64/makecat.exe.manifest",
-        "bin/10.0.26100.0/arm64/makepri.exe",
-        "bin/10.0.26100.0/arm64/mc.exe",
-        "bin/10.0.26100.0/arm64/mdmerge.exe",
-        "bin/10.0.26100.0/arm64/midl.exe",
-        "bin/10.0.26100.0/arm64/midlc.exe",
-        "bin/10.0.26100.0/arm64/midlrt.exe",
-        "bin/10.0.26100.0/arm64/midlrtmd.dll",
-        "bin/10.0.26100.0/arm64/mrmsupport.dll",
-        "bin/10.0.26100.0/arm64/msisip.dll",
-        "bin/10.0.26100.0/arm64/mssign32.dll",
-        "bin/10.0.26100.0/arm64/mt.exe",
-        "bin/10.0.26100.0/arm64/mt.exe.config",
-        "bin/10.0.26100.0/arm64/opcservices.dll",
-        "bin/10.0.26100.0/arm64/rc.exe",
-        "bin/10.0.26100.0/arm64/rcdll.dll",
-        "bin/10.0.26100.0/arm64/signtool.exe",
-        "bin/10.0.26100.0/arm64/signtool.exe.manifest",
-        "bin/10.0.26100.0/arm64/tracewpp.exe",
-        "bin/10.0.26100.0/arm64/uuidgen.exe",
-        "bin/10.0.26100.0/arm64/veiid.exe",
-        "bin/10.0.26100.0/arm64/winmdidl.exe",
-        "bin/10.0.26100.0/arm64/wintrust.dll",
-        "bin/10.0.26100.0/arm64/wintrust.dll.ini",
-        "bin/10.0.26100.0/x64/AccChecker/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.26100.0/x64/ComparePackage.exe",
-        "bin/10.0.26100.0/x64/DeployUtil.exe",
-        "bin/10.0.26100.0/x64/MakeCert.exe",
-        "bin/10.0.26100.0/x64/Microsoft.ComparePackage.Lib.dll",
-        "bin/10.0.26100.0/x64/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.26100.0/x64/Microsoft.PackageEditor.Lib.dll",
-        "bin/10.0.26100.0/x64/Microsoft.Tools.Connectivity.dll",
-        "bin/10.0.26100.0/x64/Microsoft.Tools.Deploy.dll",
-        "bin/10.0.26100.0/x64/Microsoft.Windows.Build.Appx.AppxPackaging.dll.manifest",
-        "bin/10.0.26100.0/x64/Microsoft.Windows.Build.Appx.AppxSip.dll.manifest",
-        "bin/10.0.26100.0/x64/Microsoft.Windows.Build.Appx.OpcServices.dll.manifest",
-        "bin/10.0.26100.0/x64/Microsoft.Windows.Build.Signing.mssign32.dll.manifest",
-        "bin/10.0.26100.0/x64/Microsoft.Windows.Build.Signing.wintrust.dll.manifest",
-        "bin/10.0.26100.0/x64/PackageEditor.exe",
-        "bin/10.0.26100.0/x64/ServicingCommon.dll",
-        "bin/10.0.26100.0/x64/SirepClient.assembly.manifest",
-        "bin/10.0.26100.0/x64/SirepClient.dll",
-        "bin/10.0.26100.0/x64/SirepInterop.dll",
-        "bin/10.0.26100.0/x64/SshClient.dll",
-        "bin/10.0.26100.0/x64/WinAppDeployCmd.exe",
-        "bin/10.0.26100.0/x64/WinAppDeployCommon.dll",
-        "bin/10.0.26100.0/x64/appxpackaging.dll",
-        "bin/10.0.26100.0/x64/appxsip.dll",
-        "bin/10.0.26100.0/x64/en-US/AppxPackaging.dll.mui",
-        "bin/10.0.26100.0/x64/en/Microsoft.Tools.Deploy.resources.dll",
-        "bin/10.0.26100.0/x64/en/WinAppDeployCmd.resources.dll",
-        "bin/10.0.26100.0/x64/ipoverusb.discoverpartners.dll",
-        "bin/10.0.26100.0/x64/makeappx.exe",
-        "bin/10.0.26100.0/x64/makecat.exe",
-        "bin/10.0.26100.0/x64/makecat.exe.manifest",
-        "bin/10.0.26100.0/x64/makepri.exe",
-        "bin/10.0.26100.0/x64/mc.exe",
-        "bin/10.0.26100.0/x64/mdmerge.exe",
-        "bin/10.0.26100.0/x64/midl.exe",
-        "bin/10.0.26100.0/x64/midlc.exe",
-        "bin/10.0.26100.0/x64/midlrt.exe",
-        "bin/10.0.26100.0/x64/midlrtmd.dll",
-        "bin/10.0.26100.0/x64/mrmsupport.dll",
-        "bin/10.0.26100.0/x64/msisip.dll",
-        "bin/10.0.26100.0/x64/mssign32.dll",
-        "bin/10.0.26100.0/x64/mt.exe",
-        "bin/10.0.26100.0/x64/mt.exe.config",
-        "bin/10.0.26100.0/x64/opcservices.dll",
-        "bin/10.0.26100.0/x64/rc.exe",
-        "bin/10.0.26100.0/x64/rcdll.dll",
-        "bin/10.0.26100.0/x64/signtool.exe",
-        "bin/10.0.26100.0/x64/signtool.exe.manifest",
-        "bin/10.0.26100.0/x64/tracewpp.exe",
-        "bin/10.0.26100.0/x64/uuidgen.exe",
-        "bin/10.0.26100.0/x64/veiid.exe",
-        "bin/10.0.26100.0/x64/winmdidl.exe",
-        "bin/10.0.26100.0/x64/wintrust.dll",
-        "bin/10.0.26100.0/x64/wintrust.dll.ini",
-        "bin/10.0.26100.0/x86/AccChecker/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.26100.0/x86/ComparePackage.exe",
-        "bin/10.0.26100.0/x86/DeployUtil.exe",
-        "bin/10.0.26100.0/x86/MakeCert.exe",
-        "bin/10.0.26100.0/x86/Microsoft.ComparePackage.Lib.dll",
-        "bin/10.0.26100.0/x86/Microsoft.Diagnostics.Tracing.EventSource.dll",
-        "bin/10.0.26100.0/x86/Microsoft.PackageEditor.Lib.dll",
-        "bin/10.0.26100.0/x86/Microsoft.Tools.Connectivity.dll",
-        "bin/10.0.26100.0/x86/Microsoft.Tools.Deploy.dll",
-        "bin/10.0.26100.0/x86/Microsoft.Windows.Build.Appx.AppxPackaging.dll.manifest",
-        "bin/10.0.26100.0/x86/Microsoft.Windows.Build.Appx.AppxSip.dll.manifest",
-        "bin/10.0.26100.0/x86/Microsoft.Windows.Build.Appx.OpcServices.dll.manifest",
-        "bin/10.0.26100.0/x86/Microsoft.Windows.Build.Signing.mssign32.dll.manifest",
-        "bin/10.0.26100.0/x86/Microsoft.Windows.Build.Signing.wintrust.dll.manifest",
-        "bin/10.0.26100.0/x86/PackageEditor.exe",
-        "bin/10.0.26100.0/x86/ServicingCommon.dll",
-        "bin/10.0.26100.0/x86/SirepClient.assembly.manifest",
-        "bin/10.0.26100.0/x86/SirepClient.dll",
-        "bin/10.0.26100.0/x86/SirepInterop.dll",
-        "bin/10.0.26100.0/x86/SshClient.dll",
-        "bin/10.0.26100.0/x86/WinAppDeployCmd.exe",
-        "bin/10.0.26100.0/x86/WinAppDeployCommon.dll",
-        "bin/10.0.26100.0/x86/appxpackaging.dll",
-        "bin/10.0.26100.0/x86/appxsip.dll",
-        "bin/10.0.26100.0/x86/en-US/AppxPackaging.dll.mui",
-        "bin/10.0.26100.0/x86/en/Microsoft.Tools.Deploy.resources.dll",
-        "bin/10.0.26100.0/x86/en/WinAppDeployCmd.resources.dll",
-        "bin/10.0.26100.0/x86/ipoverusb.discoverpartners.dll",
-        "bin/10.0.26100.0/x86/makeappx.exe",
-        "bin/10.0.26100.0/x86/makecat.exe",
-        "bin/10.0.26100.0/x86/makecat.exe.manifest",
-        "bin/10.0.26100.0/x86/makepri.exe",
-        "bin/10.0.26100.0/x86/mc.exe",
-        "bin/10.0.26100.0/x86/mdmerge.exe",
-        "bin/10.0.26100.0/x86/midl.exe",
-        "bin/10.0.26100.0/x86/midlc.exe",
-        "bin/10.0.26100.0/x86/midlrt.exe",
-        "bin/10.0.26100.0/x86/midlrtmd.dll",
-        "bin/10.0.26100.0/x86/mrmsupport.dll",
-        "bin/10.0.26100.0/x86/msisip.dll",
-        "bin/10.0.26100.0/x86/mssign32.dll",
-        "bin/10.0.26100.0/x86/mt.exe",
-        "bin/10.0.26100.0/x86/mt.exe.config",
-        "bin/10.0.26100.0/x86/opcservices.dll",
-        "bin/10.0.26100.0/x86/rc.exe",
-        "bin/10.0.26100.0/x86/rcdll.dll",
-        "bin/10.0.26100.0/x86/signtool.exe",
-        "bin/10.0.26100.0/x86/signtool.exe.manifest",
-        "bin/10.0.26100.0/x86/tracewpp.exe",
-        "bin/10.0.26100.0/x86/uuidgen.exe",
-        "bin/10.0.26100.0/x86/winmdidl.exe",
-        "bin/10.0.26100.0/x86/wintrust.dll",
-        "bin/10.0.26100.0/x86/wintrust.dll.ini",
-        "build/Microsoft.Windows.SDK.BuildTools.props",
-        "build/Microsoft.Windows.SDK.BuildTools.targets",
-        "buildTransitive/Microsoft.Windows.SDK.BuildTools.props",
-        "buildTransitive/Microsoft.Windows.SDK.BuildTools.targets",
-        "microsoft.windows.sdk.buildtools.10.0.26100.1742.nupkg.sha512",
-        "microsoft.windows.sdk.buildtools.nuspec",
-        "schemas/10.0.26100.0/winrt/AppxManifestSchema.xsd",
-        "schemas/10.0.26100.0/winrt/AppxManifestSchema2010_v2.xsd",
-        "schemas/10.0.26100.0/winrt/AppxManifestSchema2013.xsd",
-        "schemas/10.0.26100.0/winrt/FoundationManifestSchema.xsd",
-        "schemas/10.0.26100.0/winrt/FoundationManifestSchema_v2.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v10.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v11.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v12.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v13.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v15.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v15a.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v16.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v17.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v2.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v3.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v4.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v5.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v6.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v7.xsd",
-        "schemas/10.0.26100.0/winrt/UapManifestSchema_v8.xsd"
-      ]
-    },
-    "Microsoft.WindowsAppSDK/1.6.250108002": {
-      "sha512": "dOJ3oFeHnehVBAR98lR6YfX0JgDJkrehLqwZQqQE/iZgyye1c1TZu9oj3MBbgWP9xFApWUrb0G49KKnQWEZLtA==",
-      "type": "package",
-      "path": "microsoft.windowsappsdk/1.6.250108002",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "NOTICE.txt",
-        "WindowsAppSDK-VersionInfo.json",
-        "WindowsAppSDK-VersionInfo.xml",
-        "build/AppDevPackageScripts/Add-AppDevPackage.ps1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/cs-CZ/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/de-DE/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/en-US/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/es-ES/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/fr-FR/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/it-IT/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ja-JP/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ko-KR/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/pl-PL/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/pt-BR/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ru-RU/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/tr-TR/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/zh-CN/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Add-AppDevPackage.resources/zh-TW/Add-AppDevPackage.psd1",
-        "build/AppDevPackageScripts/Install.ps1",
-        "build/AppDevPackageScripts/LogSideloadingTelemetry.ps1",
-        "build/Landing/extras/br.png",
-        "build/Landing/extras/br_snippet.png",
-        "build/Landing/image.png",
-        "build/Landing/index.template.html",
-        "build/Landing/logo.png",
-        "build/Landing/style.css",
-        "build/Microsoft.Build.Msix.Common.props",
-        "build/Microsoft.Build.Msix.Cpp.props",
-        "build/Microsoft.Build.Msix.Cpp.targets",
-        "build/Microsoft.Build.Msix.Cs.targets",
-        "build/Microsoft.Build.Msix.DesignTime.targets",
-        "build/Microsoft.Build.Msix.Packaging.targets",
-        "build/Microsoft.Build.Msix.Pri.targets",
-        "build/Microsoft.Build.Msix.props",
-        "build/Microsoft.Build.Msix.targets",
-        "build/Microsoft.InteractiveExperiences.Capabilities.props",
-        "build/Microsoft.InteractiveExperiences.Capabilities.targets",
-        "build/Microsoft.InteractiveExperiences.Common.props",
-        "build/Microsoft.InteractiveExperiences.Common.targets",
-        "build/Microsoft.InteractiveExperiences.props",
-        "build/Microsoft.InteractiveExperiences.targets",
-        "build/Microsoft.UI.Xaml.Markup.Compiler.BeforeCommon.targets",
-        "build/Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
-        "build/Microsoft.UI.Xaml.Markup.Compiler.props",
-        "build/Microsoft.UI.Xaml.Markup.Compiler.targets",
-        "build/Microsoft.WinUI.AppX.targets",
-        "build/Microsoft.WinUI.NET.Markup.Compiler.targets",
-        "build/Microsoft.WinUI.ProjectCapabilities.props",
-        "build/Microsoft.WinUI.References.targets",
-        "build/Microsoft.WinUI.props",
-        "build/Microsoft.WinUI.targets",
-        "build/Microsoft.WindowsAppSDK.AppXReference.props",
-        "build/Microsoft.WindowsAppSDK.Bootstrap.CS.targets",
-        "build/Microsoft.WindowsAppSDK.BootstrapCommon.targets",
-        "build/Microsoft.WindowsAppSDK.Common.props",
-        "build/Microsoft.WindowsAppSDK.DWrite.ProjectCapabilities.props",
-        "build/Microsoft.WindowsAppSDK.DWrite.props",
-        "build/Microsoft.WindowsAppSDK.DWrite.targets",
-        "build/Microsoft.WindowsAppSDK.DeploymentManager.CS.targets",
-        "build/Microsoft.WindowsAppSDK.DeploymentManagerCommon.targets",
-        "build/Microsoft.WindowsAppSDK.Foundation.props",
-        "build/Microsoft.WindowsAppSDK.Foundation.targets",
-        "build/Microsoft.WindowsAppSDK.InteractiveExperiences.props",
-        "build/Microsoft.WindowsAppSDK.InteractiveExperiences.targets",
-        "build/Microsoft.WindowsAppSDK.Metapackage.props",
-        "build/Microsoft.WindowsAppSDK.SelfContained.targets",
-        "build/Microsoft.WindowsAppSDK.SingleFile.targets",
-        "build/Microsoft.WindowsAppSDK.UndockedRegFreeWinRT.CS.targets",
-        "build/Microsoft.WindowsAppSDK.UndockedRegFreeWinRTCommon.targets",
-        "build/Microsoft.WindowsAppSDK.Widgets.targets",
-        "build/Microsoft.WindowsAppSDK.WinUI.props",
-        "build/Microsoft.WindowsAppSDK.WinUI.targets",
-        "build/Microsoft.WindowsAppSDK.props",
-        "build/Microsoft.WindowsAppSDK.targets",
-        "build/Microsoft.Xaml.Tooling.targets",
-        "build/MicrosoftWindowsAppSDKFoundationAppXVersion.props",
-        "build/MrtCore.PriGen.targets",
-        "build/MrtCore.References.targets",
-        "build/MrtCore.props",
-        "build/MrtCore.targets",
-        "build/ProjectItemsSchema.xaml",
-        "build/README.md",
-        "build/Rules/MsixPackageDebugPropertyPage.xaml",
-        "build/Rules/WindowsPackageTypePropertyPage.xaml",
-        "build/Templates/Package.appinstaller",
-        "build/native/LiftedWinRTClassRegistrations.xml",
-        "build/native/Microsoft.InteractiveExperiences.props",
-        "build/native/Microsoft.InteractiveExperiences.targets",
-        "build/native/Microsoft.WinUI.References.targets",
-        "build/native/Microsoft.WinUI.props",
-        "build/native/Microsoft.WinUI.targets",
-        "build/native/Microsoft.WindowsAppSDK.Foundation.props",
-        "build/native/Microsoft.WindowsAppSDK.Foundation.targets",
-        "build/native/Microsoft.WindowsAppSDK.InteractiveExperiences.props",
-        "build/native/Microsoft.WindowsAppSDK.InteractiveExperiences.targets",
-        "build/native/Microsoft.WindowsAppSDK.Widgets.targets",
-        "build/native/Microsoft.WindowsAppSDK.WinUI.props",
-        "build/native/Microsoft.WindowsAppSDK.WinUI.targets",
-        "build/native/Microsoft.WindowsAppSDK.props",
-        "build/native/Microsoft.WindowsAppSDK.targets",
-        "build/native/MrtCore.C.props",
-        "build/native/MrtCore.props",
-        "build/native/MrtCore.targets",
-        "build/native/WindowsAppSDK-Nuget-Native.Bootstrap.targets",
-        "build/native/WindowsAppSDK-Nuget-Native.C.props",
-        "build/native/WindowsAppSDK-Nuget-Native.DeploymentManager.targets",
-        "build/native/WindowsAppSDK-Nuget-Native.UndockedRegFreeWinRT.targets",
-        "build/native/WindowsAppSDK-Nuget-Native.WinRt.props",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.ps1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/cs-CZ/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/de-DE/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/en-US/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/es-ES/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/fr-FR/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/it-IT/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/ja-JP/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/ko-KR/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/pl-PL/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/pt-BR/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/ru-RU/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/tr-TR/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/zh-CN/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/zh-TW/Add-AppDevPackage.psd1",
-        "buildTransitive/AppDevPackageScripts/Install.ps1",
-        "buildTransitive/AppDevPackageScripts/LogSideloadingTelemetry.ps1",
-        "buildTransitive/Landing/extras/br.png",
-        "buildTransitive/Landing/extras/br_snippet.png",
-        "buildTransitive/Landing/image.png",
-        "buildTransitive/Landing/index.template.html",
-        "buildTransitive/Landing/logo.png",
-        "buildTransitive/Landing/style.css",
-        "buildTransitive/Microsoft.Build.Msix.Common.props",
-        "buildTransitive/Microsoft.Build.Msix.Cpp.props",
-        "buildTransitive/Microsoft.Build.Msix.Cpp.targets",
-        "buildTransitive/Microsoft.Build.Msix.Cs.targets",
-        "buildTransitive/Microsoft.Build.Msix.DesignTime.targets",
-        "buildTransitive/Microsoft.Build.Msix.Packaging.targets",
-        "buildTransitive/Microsoft.Build.Msix.Pri.targets",
-        "buildTransitive/Microsoft.Build.Msix.props",
-        "buildTransitive/Microsoft.Build.Msix.targets",
-        "buildTransitive/Microsoft.InteractiveExperiences.Capabilities.props",
-        "buildTransitive/Microsoft.InteractiveExperiences.Capabilities.targets",
-        "buildTransitive/Microsoft.InteractiveExperiences.Common.props",
-        "buildTransitive/Microsoft.InteractiveExperiences.Common.targets",
-        "buildTransitive/Microsoft.InteractiveExperiences.props",
-        "buildTransitive/Microsoft.InteractiveExperiences.targets",
-        "buildTransitive/Microsoft.UI.Xaml.Markup.Compiler.BeforeCommon.targets",
-        "buildTransitive/Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
-        "buildTransitive/Microsoft.UI.Xaml.Markup.Compiler.props",
-        "buildTransitive/Microsoft.UI.Xaml.Markup.Compiler.targets",
-        "buildTransitive/Microsoft.WinUI.AppX.targets",
-        "buildTransitive/Microsoft.WinUI.NET.Markup.Compiler.targets",
-        "buildTransitive/Microsoft.WinUI.ProjectCapabilities.props",
-        "buildTransitive/Microsoft.WinUI.References.targets",
-        "buildTransitive/Microsoft.WinUI.props",
-        "buildTransitive/Microsoft.WinUI.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.AppXReference.props",
-        "buildTransitive/Microsoft.WindowsAppSDK.Bootstrap.CS.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.BootstrapCommon.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.Common.props",
-        "buildTransitive/Microsoft.WindowsAppSDK.DWrite.ProjectCapabilities.props",
-        "buildTransitive/Microsoft.WindowsAppSDK.DWrite.props",
-        "buildTransitive/Microsoft.WindowsAppSDK.DWrite.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.DeploymentManager.CS.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.DeploymentManagerCommon.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.Foundation.props",
-        "buildTransitive/Microsoft.WindowsAppSDK.Foundation.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.InteractiveExperiences.props",
-        "buildTransitive/Microsoft.WindowsAppSDK.InteractiveExperiences.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.Metapackage.props",
-        "buildTransitive/Microsoft.WindowsAppSDK.SelfContained.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.SingleFile.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.UndockedRegFreeWinRT.CS.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.UndockedRegFreeWinRTCommon.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.Widgets.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.WinUI.props",
-        "buildTransitive/Microsoft.WindowsAppSDK.WinUI.targets",
-        "buildTransitive/Microsoft.WindowsAppSDK.props",
-        "buildTransitive/Microsoft.WindowsAppSDK.targets",
-        "buildTransitive/Microsoft.Xaml.Tooling.targets",
-        "buildTransitive/MicrosoftWindowsAppSDKFoundationAppXVersion.props",
-        "buildTransitive/MrtCore.PriGen.targets",
-        "buildTransitive/MrtCore.References.targets",
-        "buildTransitive/MrtCore.props",
-        "buildTransitive/MrtCore.targets",
-        "buildTransitive/ProjectItemsSchema.xaml",
-        "buildTransitive/README.md",
-        "buildTransitive/Rules/MsixPackageDebugPropertyPage.xaml",
-        "buildTransitive/Rules/WindowsPackageTypePropertyPage.xaml",
-        "buildTransitive/Templates/Package.appinstaller",
-        "buildTransitive/native/LiftedWinRTClassRegistrations.xml",
-        "buildTransitive/native/Microsoft.InteractiveExperiences.props",
-        "buildTransitive/native/Microsoft.InteractiveExperiences.targets",
-        "buildTransitive/native/Microsoft.WinUI.References.targets",
-        "buildTransitive/native/Microsoft.WinUI.props",
-        "buildTransitive/native/Microsoft.WinUI.targets",
-        "buildTransitive/native/Microsoft.WindowsAppSDK.Foundation.props",
-        "buildTransitive/native/Microsoft.WindowsAppSDK.Foundation.targets",
-        "buildTransitive/native/Microsoft.WindowsAppSDK.InteractiveExperiences.props",
-        "buildTransitive/native/Microsoft.WindowsAppSDK.InteractiveExperiences.targets",
-        "buildTransitive/native/Microsoft.WindowsAppSDK.Widgets.targets",
-        "buildTransitive/native/Microsoft.WindowsAppSDK.WinUI.props",
-        "buildTransitive/native/Microsoft.WindowsAppSDK.WinUI.targets",
-        "buildTransitive/native/Microsoft.WindowsAppSDK.props",
-        "buildTransitive/native/Microsoft.WindowsAppSDK.targets",
-        "buildTransitive/native/MrtCore.C.props",
-        "buildTransitive/native/MrtCore.props",
-        "buildTransitive/native/MrtCore.targets",
-        "buildTransitive/native/WindowsAppSDK-Nuget-Native.Bootstrap.targets",
-        "buildTransitive/native/WindowsAppSDK-Nuget-Native.C.props",
-        "buildTransitive/native/WindowsAppSDK-Nuget-Native.DeploymentManager.targets",
-        "buildTransitive/native/WindowsAppSDK-Nuget-Native.UndockedRegFreeWinRT.targets",
-        "buildTransitive/native/WindowsAppSDK-Nuget-Native.WinRt.props",
-        "include/DeploymentManagerAutoInitializer.cpp",
-        "include/DeploymentManagerAutoInitializer.cs",
-        "include/MRM.h",
-        "include/MddBootstrap.h",
-        "include/MddBootstrapAutoInitializer.cpp",
-        "include/MddBootstrapAutoInitializer.cs",
-        "include/Microsoft.UI.Composition.Interop.h",
-        "include/Microsoft.UI.Dispatching.Interop.h",
-        "include/Microsoft.UI.Input.InputCursor.Interop.h",
-        "include/Microsoft.UI.Input.InputPreTranslateSource.Interop.h",
-        "include/Microsoft.UI.Interop.h",
-        "include/Microsoft.Windows.ApplicationModel.Resources.idl",
-        "include/MsixDynamicDependency.h",
-        "include/Security.AccessControl.h",
-        "include/UndockedRegFreeWinRT-AutoInitializer.cpp",
-        "include/UndockedRegFreeWinRT-AutoInitializer.cs",
-        "include/WindowsAppRuntimeInsights.h",
-        "include/WindowsAppSDK-VersionInfo.cs",
-        "include/WindowsAppSDK-VersionInfo.h",
-        "include/dwrite.h",
-        "include/dwrite_1.h",
-        "include/dwrite_2.h",
-        "include/dwrite_3.h",
-        "include/dwrite_core.h",
-        "include/microsoft.ui.xaml.hosting.referencetracker.h",
-        "include/microsoft.ui.xaml.hosting.referencetracker.idl",
-        "include/microsoft.ui.xaml.media.dxinterop.h",
-        "include/microsoft.ui.xaml.media.dxinterop.idl",
-        "include/microsoft.ui.xaml.window.h",
-        "include/microsoft.ui.xaml.window.idl",
-        "include/wil_msixdynamicdependency.h",
-        "include/winrt/Microsoft.UI.Composition.Interop.h",
-        "include/winrt/Microsoft.UI.Input.InputCursor.Interop.h",
-        "include/winrt/Microsoft.UI.Input.InputPreTranslateSource.Interop.h",
-        "include/winrt/Microsoft.UI.Interop.h",
-        "include/winrtdirect3d11.h",
-        "include/winrtdirectxcommon.h",
-        "include/xamlom.winui.h",
-        "include/xamlom.winui.idl",
-        "lib/native/win10-arm64/Microsoft.UI.Dispatching.lib",
-        "lib/native/win10-x64/Microsoft.UI.Dispatching.lib",
-        "lib/native/win10-x86/Microsoft.UI.Dispatching.lib",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.InteractiveExperiences.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.InteractiveExperiences.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.WinUI.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.WinUI.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.WinUI/Themes/generic.xaml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AppLifecycle.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AppLifecycle.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AppNotifications.Builder.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AppNotifications.Builder.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AppNotifications.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.AppNotifications.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.ApplicationModel.Resources.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.ApplicationModel.Resources.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Management.Deployment.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Management.Deployment.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.PushNotifications.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.PushNotifications.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Security.AccessControl.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Security.AccessControl.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Storage.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Storage.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.System.Power.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.System.Power.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.System.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.System.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Widgets.Projection.dll",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.Windows.Widgets.Projection.xml",
-        "lib/net6.0-windows10.0.17763.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.WinUI.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.WinUI.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.WinUI/Themes/generic.xaml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppLifecycle.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppLifecycle.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Builder.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Builder.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.AppNotifications.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.Resources.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.Resources.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Management.Deployment.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Management.Deployment.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.PushNotifications.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.PushNotifications.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Security.AccessControl.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Security.AccessControl.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Storage.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Storage.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Power.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Power.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.System.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Widgets.Projection.dll",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.Windows.Widgets.Projection.xml",
-        "lib/net6.0-windows10.0.18362.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll",
-        "lib/uap10.0.17763/Microsoft.Foundation.winmd",
-        "lib/uap10.0.17763/Microsoft.Graphics.winmd",
-        "lib/uap10.0.17763/Microsoft.Graphics.xml",
-        "lib/uap10.0.17763/Microsoft.UI.winmd",
-        "lib/uap10.0.17763/Microsoft.UI.xml",
-        "lib/uap10.0.18362/Microsoft.Foundation.winmd",
-        "lib/uap10.0.18362/Microsoft.Graphics.winmd",
-        "lib/uap10.0.18362/Microsoft.Graphics.xml",
-        "lib/uap10.0.18362/Microsoft.UI.winmd",
-        "lib/uap10.0.18362/Microsoft.UI.xml",
-        "lib/uap10.0/Microsoft.UI.Text.winmd",
-        "lib/uap10.0/Microsoft.UI.Text.xml",
-        "lib/uap10.0/Microsoft.UI.Xaml.winmd",
-        "lib/uap10.0/Microsoft.UI.Xaml.xml",
-        "lib/uap10.0/Microsoft.UI/Themes/generic.xaml",
-        "lib/uap10.0/Microsoft.Windows.AppLifecycle.winmd",
-        "lib/uap10.0/Microsoft.Windows.AppLifecycle.xml",
-        "lib/uap10.0/Microsoft.Windows.AppNotifications.Builder.winmd",
-        "lib/uap10.0/Microsoft.Windows.AppNotifications.Builder.xml",
-        "lib/uap10.0/Microsoft.Windows.AppNotifications.winmd",
-        "lib/uap10.0/Microsoft.Windows.AppNotifications.xml",
-        "lib/uap10.0/Microsoft.Windows.ApplicationModel.DynamicDependency.winmd",
-        "lib/uap10.0/Microsoft.Windows.ApplicationModel.DynamicDependency.xml",
-        "lib/uap10.0/Microsoft.Windows.ApplicationModel.Resources.winmd",
-        "lib/uap10.0/Microsoft.Windows.ApplicationModel.Resources.xml",
-        "lib/uap10.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.winmd",
-        "lib/uap10.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.xml",
-        "lib/uap10.0/Microsoft.Windows.Globalization.winmd",
-        "lib/uap10.0/Microsoft.Windows.Globalization.xml",
-        "lib/uap10.0/Microsoft.Windows.Management.Deployment.winmd",
-        "lib/uap10.0/Microsoft.Windows.Management.Deployment.xml",
-        "lib/uap10.0/Microsoft.Windows.PushNotifications.winmd",
-        "lib/uap10.0/Microsoft.Windows.PushNotifications.xml",
-        "lib/uap10.0/Microsoft.Windows.Security.AccessControl.winmd",
-        "lib/uap10.0/Microsoft.Windows.Security.AccessControl.xml",
-        "lib/uap10.0/Microsoft.Windows.Storage.winmd",
-        "lib/uap10.0/Microsoft.Windows.Storage.xml",
-        "lib/uap10.0/Microsoft.Windows.System.Power.winmd",
-        "lib/uap10.0/Microsoft.Windows.System.Power.xml",
-        "lib/uap10.0/Microsoft.Windows.System.winmd",
-        "lib/uap10.0/Microsoft.Windows.System.xml",
-        "lib/uap10.0/Microsoft.Windows.Widgets.winmd",
-        "lib/uap10.0/Microsoft.Windows.Widgets.xml",
-        "lib/win10-arm64/DWriteCore.lib",
-        "lib/win10-arm64/MRM.lib",
-        "lib/win10-arm64/Microsoft.WindowsAppRuntime.Bootstrap.lib",
-        "lib/win10-arm64/Microsoft.WindowsAppRuntime.lib",
-        "lib/win10-x64/DWriteCore.lib",
-        "lib/win10-x64/MRM.lib",
-        "lib/win10-x64/Microsoft.WindowsAppRuntime.Bootstrap.lib",
-        "lib/win10-x64/Microsoft.WindowsAppRuntime.lib",
-        "lib/win10-x86/DWriteCore.lib",
-        "lib/win10-x86/MRM.lib",
-        "lib/win10-x86/Microsoft.WindowsAppRuntime.Bootstrap.lib",
-        "lib/win10-x86/Microsoft.WindowsAppRuntime.lib",
-        "license.txt",
-        "manifests/Microsoft.InteractiveExperiences.manifest",
-        "manifests/Microsoft.WindowsAppSdk.Foundation.manifest",
-        "manifests/manifests/Microsoft.WindowsAppSdk.WinUI.manifest",
-        "microsoft.windowsappsdk.1.6.250108002.nupkg.sha512",
-        "microsoft.windowsappsdk.nuspec",
-        "runtimes/win-arm64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll",
-        "runtimes/win-x64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll",
-        "runtimes/win-x86/native/Microsoft.WindowsAppRuntime.Bootstrap.dll",
-        "tools/MSIX/win10-arm64/MSIX.inventory",
-        "tools/MSIX/win10-arm64/Microsoft.WindowsAppRuntime.1.6.msix",
-        "tools/MSIX/win10-arm64/Microsoft.WindowsAppRuntime.DDLM.1.6.msix",
-        "tools/MSIX/win10-arm64/Microsoft.WindowsAppRuntime.Main.1.6.msix",
-        "tools/MSIX/win10-arm64/Microsoft.WindowsAppRuntime.Singleton.1.6.msix",
-        "tools/MSIX/win10-x64/MSIX.inventory",
-        "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.1.6.msix",
-        "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.DDLM.1.6.msix",
-        "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.Main.1.6.msix",
-        "tools/MSIX/win10-x64/Microsoft.WindowsAppRuntime.Singleton.1.6.msix",
-        "tools/MSIX/win10-x86/MSIX.inventory",
-        "tools/MSIX/win10-x86/Microsoft.WindowsAppRuntime.1.6.msix",
-        "tools/MSIX/win10-x86/Microsoft.WindowsAppRuntime.DDLM.1.6.msix",
-        "tools/MSIX/win10-x86/Microsoft.WindowsAppRuntime.Main.1.6.msix",
-        "tools/MSIX/win10-x86/Microsoft.WindowsAppRuntime.Singleton.1.6.msix",
-        "tools/NOTICE.txt",
-        "tools/arm64/GenXbf.dll",
-        "tools/net472/Microsoft.Bcl.AsyncInterfaces.dll",
-        "tools/net472/Microsoft.Build.Framework.dll",
-        "tools/net472/Microsoft.Build.Msix.dll",
-        "tools/net472/Microsoft.Build.Utilities.Core.dll",
-        "tools/net472/Microsoft.Build.dll",
-        "tools/net472/Microsoft.Cci.dll",
-        "tools/net472/Microsoft.UI.Xaml.Markup.Compiler.IO.dll",
-        "tools/net472/Microsoft.UI.Xaml.Markup.Compiler.MSBuildInterop.dll",
-        "tools/net472/Microsoft.UI.Xaml.Markup.Compiler.dll",
-        "tools/net472/Microsoft.VisualStudio.RemoteControl.dll",
-        "tools/net472/Microsoft.VisualStudio.Telemetry.dll",
-        "tools/net472/Microsoft.VisualStudio.Utilities.Internal.dll",
-        "tools/net472/Newtonsoft.Json.dll",
-        "tools/net472/System.Buffers.dll",
-        "tools/net472/System.Collections.Immutable.dll",
-        "tools/net472/System.Memory.dll",
-        "tools/net472/System.Numerics.Vectors.dll",
-        "tools/net472/System.Reflection.Metadata.dll",
-        "tools/net472/System.Runtime.CompilerServices.Unsafe.dll",
-        "tools/net472/System.Text.Encodings.Web.dll",
-        "tools/net472/System.Text.Json.dll",
-        "tools/net472/System.Threading.Tasks.Dataflow.dll",
-        "tools/net472/System.Threading.Tasks.Extensions.dll",
-        "tools/net472/XamlCompiler.exe",
-        "tools/net472/XamlCompiler.exe.config",
-        "tools/net6.0/Microsoft.Bcl.AsyncInterfaces.dll",
-        "tools/net6.0/Microsoft.Build.Msix.dll",
-        "tools/net6.0/Microsoft.Cci.dll",
-        "tools/net6.0/Microsoft.UI.Xaml.Markup.Compiler.IO.dll",
-        "tools/net6.0/Microsoft.UI.Xaml.Markup.Compiler.MSBuildInterop.dll",
-        "tools/net6.0/Microsoft.UI.Xaml.Markup.Compiler.dll",
-        "tools/net6.0/Microsoft.VisualStudio.RemoteControl.dll",
-        "tools/net6.0/Microsoft.VisualStudio.Telemetry.dll",
-        "tools/net6.0/Microsoft.VisualStudio.Utilities.Internal.dll",
-        "tools/net6.0/Newtonsoft.Json.dll",
-        "tools/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "tools/net6.0/System.Text.Encodings.Web.dll",
-        "tools/net6.0/System.Text.Json.dll",
-        "tools/x64/GenXbf.dll",
-        "tools/x86/GenXbf.dll"
       ]
     },
     "NAudio/2.2.1": {
@@ -1574,6 +2047,252 @@
         "naudio.winmm.nuspec"
       ]
     },
+    "SkiaSharp/2.88.8": {
+      "sha512": "bRkp3uKp5ZI8gXYQT57uKwil1uobb2p8c69n7v5evlB/2JNcMAXVcw9DZAP5Ig3WSvgzGm2YSn27UVeOi05NlA==",
+      "type": "package",
+      "path": "skiasharp/2.88.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "interactive-extensions/dotnet/SkiaSharp.DotNet.Interactive.dll",
+        "lib/monoandroid1.0/SkiaSharp.dll",
+        "lib/monoandroid1.0/SkiaSharp.pdb",
+        "lib/monoandroid1.0/SkiaSharp.xml",
+        "lib/net462/SkiaSharp.dll",
+        "lib/net462/SkiaSharp.pdb",
+        "lib/net462/SkiaSharp.xml",
+        "lib/net6.0-android30.0/SkiaSharp.dll",
+        "lib/net6.0-android30.0/SkiaSharp.pdb",
+        "lib/net6.0-android30.0/SkiaSharp.xml",
+        "lib/net6.0-ios13.6/SkiaSharp.dll",
+        "lib/net6.0-ios13.6/SkiaSharp.pdb",
+        "lib/net6.0-ios13.6/SkiaSharp.xml",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.dll",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.pdb",
+        "lib/net6.0-maccatalyst13.5/SkiaSharp.xml",
+        "lib/net6.0-macos10.15/SkiaSharp.dll",
+        "lib/net6.0-macos10.15/SkiaSharp.pdb",
+        "lib/net6.0-macos10.15/SkiaSharp.xml",
+        "lib/net6.0-tizen7.0/SkiaSharp.dll",
+        "lib/net6.0-tizen7.0/SkiaSharp.pdb",
+        "lib/net6.0-tizen7.0/SkiaSharp.xml",
+        "lib/net6.0-tvos13.4/SkiaSharp.dll",
+        "lib/net6.0-tvos13.4/SkiaSharp.pdb",
+        "lib/net6.0-tvos13.4/SkiaSharp.xml",
+        "lib/net6.0/SkiaSharp.dll",
+        "lib/net6.0/SkiaSharp.pdb",
+        "lib/net6.0/SkiaSharp.xml",
+        "lib/netcoreapp3.1/SkiaSharp.dll",
+        "lib/netcoreapp3.1/SkiaSharp.pdb",
+        "lib/netcoreapp3.1/SkiaSharp.xml",
+        "lib/netstandard1.3/SkiaSharp.dll",
+        "lib/netstandard1.3/SkiaSharp.pdb",
+        "lib/netstandard1.3/SkiaSharp.xml",
+        "lib/netstandard2.0/SkiaSharp.dll",
+        "lib/netstandard2.0/SkiaSharp.pdb",
+        "lib/netstandard2.0/SkiaSharp.xml",
+        "lib/netstandard2.1/SkiaSharp.dll",
+        "lib/netstandard2.1/SkiaSharp.pdb",
+        "lib/netstandard2.1/SkiaSharp.xml",
+        "lib/tizen40/SkiaSharp.dll",
+        "lib/tizen40/SkiaSharp.pdb",
+        "lib/tizen40/SkiaSharp.xml",
+        "lib/uap10.0.10240/SkiaSharp.dll",
+        "lib/uap10.0.10240/SkiaSharp.pdb",
+        "lib/uap10.0.10240/SkiaSharp.xml",
+        "lib/uap10.0.16299/SkiaSharp.dll",
+        "lib/uap10.0.16299/SkiaSharp.pdb",
+        "lib/uap10.0.16299/SkiaSharp.xml",
+        "lib/xamarinios1.0/SkiaSharp.dll",
+        "lib/xamarinios1.0/SkiaSharp.pdb",
+        "lib/xamarinios1.0/SkiaSharp.xml",
+        "lib/xamarinmac2.0/SkiaSharp.dll",
+        "lib/xamarinmac2.0/SkiaSharp.pdb",
+        "lib/xamarinmac2.0/SkiaSharp.xml",
+        "lib/xamarintvos1.0/SkiaSharp.dll",
+        "lib/xamarintvos1.0/SkiaSharp.pdb",
+        "lib/xamarintvos1.0/SkiaSharp.xml",
+        "lib/xamarinwatchos1.0/SkiaSharp.dll",
+        "lib/xamarinwatchos1.0/SkiaSharp.pdb",
+        "lib/xamarinwatchos1.0/SkiaSharp.xml",
+        "skiasharp.2.88.8.nupkg.sha512",
+        "skiasharp.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.Linux/2.88.8": {
+      "sha512": "0FO6YA7paNFBMJULvEyecPmCvL9/STvOAi5VOUw2srqJ7pNTbiiZkfl7sulAzcumbWgfzaVjRXYTgMj7SoUnWQ==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.linux/2.88.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/SkiaSharp.NativeAssets.Linux.targets",
+        "buildTransitive/net462/SkiaSharp.NativeAssets.Linux.targets",
+        "lib/net462/_._",
+        "lib/net6.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard1.3/_._",
+        "runtimes/linux-arm/native/libSkiaSharp.so",
+        "runtimes/linux-arm64/native/libSkiaSharp.so",
+        "runtimes/linux-musl-x64/native/libSkiaSharp.so",
+        "runtimes/linux-x64/native/libSkiaSharp.so",
+        "skiasharp.nativeassets.linux.2.88.8.nupkg.sha512",
+        "skiasharp.nativeassets.linux.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.macOS/2.88.8": {
+      "sha512": "6Kn5TSkKlfyS6azWHF3Jk2sW5C4jCE5uSshM/5AbfFrR+5n6qM5XEnz9h4VaVl7LTxBvHvMkuPb/3bpbq0vxTw==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.macos/2.88.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/SkiaSharp.NativeAssets.macOS.targets",
+        "build/net6.0-macos10.15/SkiaSharp.NativeAssets.macOS.targets",
+        "build/xamarinmac2.0/SkiaSharp.NativeAssets.macOS.targets",
+        "buildTransitive/net462/SkiaSharp.NativeAssets.macOS.targets",
+        "buildTransitive/net6.0-macos10.15/SkiaSharp.NativeAssets.macOS.targets",
+        "buildTransitive/xamarinmac2.0/SkiaSharp.NativeAssets.macOS.targets",
+        "lib/net462/_._",
+        "lib/net6.0-macos10.15/_._",
+        "lib/net6.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard1.3/_._",
+        "lib/xamarinmac2.0/_._",
+        "runtimes/osx/native/libSkiaSharp.dylib",
+        "skiasharp.nativeassets.macos.2.88.8.nupkg.sha512",
+        "skiasharp.nativeassets.macos.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.WebAssembly/2.88.8": {
+      "sha512": "S3qRo8c+gVYOyfrdf6FYnjx/ft+gPkb4dNY2IPv5Oy5yNBhDhXhKqHFr9h4+ne6ZU+7D4dbuRQqsIqCo8u1/DA==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.webassembly/2.88.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/netstandard1.0/SkiaSharp.NativeAssets.WebAssembly.props",
+        "build/netstandard1.0/SkiaSharp.NativeAssets.WebAssembly.targets",
+        "build/netstandard1.0/libSkiaSharp.a/2.0.23/libSkiaSharp.a",
+        "build/netstandard1.0/libSkiaSharp.a/2.0.6/libSkiaSharp.a",
+        "build/netstandard1.0/libSkiaSharp.a/3.1.12/mt,simd/libSkiaSharp.a",
+        "build/netstandard1.0/libSkiaSharp.a/3.1.12/mt/libSkiaSharp.a",
+        "build/netstandard1.0/libSkiaSharp.a/3.1.12/simd/libSkiaSharp.a",
+        "build/netstandard1.0/libSkiaSharp.a/3.1.12/st/libSkiaSharp.a",
+        "build/netstandard1.0/libSkiaSharp.a/3.1.34/mt/libSkiaSharp.a",
+        "build/netstandard1.0/libSkiaSharp.a/3.1.34/simd,mt/libSkiaSharp.a",
+        "build/netstandard1.0/libSkiaSharp.a/3.1.34/simd,st/libSkiaSharp.a",
+        "build/netstandard1.0/libSkiaSharp.a/3.1.34/st/libSkiaSharp.a",
+        "build/netstandard1.0/libSkiaSharp.a/3.1.7/libSkiaSharp.a",
+        "buildTransitive/netstandard1.0/SkiaSharp.NativeAssets.WebAssembly.props",
+        "buildTransitive/netstandard1.0/SkiaSharp.NativeAssets.WebAssembly.targets",
+        "lib/netstandard1.0/_._",
+        "skiasharp.nativeassets.webassembly.2.88.8.nupkg.sha512",
+        "skiasharp.nativeassets.webassembly.nuspec"
+      ]
+    },
+    "SkiaSharp.NativeAssets.Win32/2.88.8": {
+      "sha512": "O9QXoWEXA+6cweR4h3BOnwMz+pO9vL9mXdjLrpDd0w1QzCgWmLQBxa1VgySDITiH7nQndrDG1h6937zm9pLj1Q==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.win32/2.88.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/SkiaSharp.NativeAssets.Win32.targets",
+        "buildTransitive/net462/SkiaSharp.NativeAssets.Win32.targets",
+        "lib/net462/_._",
+        "lib/net6.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard1.3/_._",
+        "runtimes/win-arm64/native/libSkiaSharp.dll",
+        "runtimes/win-x64/native/libSkiaSharp.dll",
+        "runtimes/win-x86/native/libSkiaSharp.dll",
+        "skiasharp.nativeassets.win32.2.88.8.nupkg.sha512",
+        "skiasharp.nativeassets.win32.nuspec"
+      ]
+    },
+    "System.IO.Pipelines/6.0.0": {
+      "sha512": "mXX66shZ4xLlI3vNLaJ0lt8OIZdmXTvIqXRdQX5HLVGSkLhINLsVhyZuX2UdRFnOGkqnwmMUs40pIIQ7mna4+A==",
+      "type": "package",
+      "path": "system.io.pipelines/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.IO.Pipelines.dll",
+        "lib/net461/System.IO.Pipelines.xml",
+        "lib/net6.0/System.IO.Pipelines.dll",
+        "lib/net6.0/System.IO.Pipelines.xml",
+        "lib/netcoreapp3.1/System.IO.Pipelines.dll",
+        "lib/netcoreapp3.1/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.6.0.0.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Security.AccessControl/4.7.0": {
       "sha512": "JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
       "type": "package",
@@ -1673,12 +2392,28 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Tmds.DBus.Protocol/0.16.0": {
+      "sha512": "9Ne9AvrRWrDQvzbMcbTz3EaGRE1vQmkeeu0Xp7Ii0Wdlhwfjst8FDRas+RBslU5kdPWs2aeMLErzyT1DwH9zeA==",
+      "type": "package",
+      "path": "tmds.dbus.protocol/0.16.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Tmds.DBus.Protocol.dll",
+        "lib/netstandard2.0/Tmds.DBus.Protocol.dll",
+        "lib/netstandard2.1/Tmds.DBus.Protocol.dll",
+        "tmds.dbus.protocol.0.16.0.nupkg.sha512",
+        "tmds.dbus.protocol.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
-    "net9.0-windows10.0.22621": [
-      "Microsoft.Windows.SDK.BuildTools >= 10.0.26100.1742",
-      "Microsoft.WindowsAppSDK >= 1.6.250108002",
+    "net9.0-windows7.0": [
+      "Avalonia >= 11.1.0",
+      "Avalonia.Desktop >= 11.1.0",
+      "Avalonia.Themes.Fluent >= 11.1.0",
+      "Microsoft.NET.ILLink.Tasks >= 9.0.12",
       "NAudio >= 2.2.1"
     ]
   },
@@ -1698,14 +2433,14 @@
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net9.0-windows10.0.22621.0"
+        "net9.0-windows"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net9.0-windows10.0.22621": {
-          "targetAlias": "net9.0-windows10.0.22621.0",
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
           "projectReferences": {}
         }
       },
@@ -1722,16 +2457,26 @@
       "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
-      "net9.0-windows10.0.22621": {
-        "targetAlias": "net9.0-windows10.0.22621.0",
+      "net9.0-windows7.0": {
+        "targetAlias": "net9.0-windows",
         "dependencies": {
-          "Microsoft.Windows.SDK.BuildTools": {
+          "Avalonia": {
             "target": "Package",
-            "version": "[10.0.26100.1742, )"
+            "version": "[11.1.0, )"
           },
-          "Microsoft.WindowsAppSDK": {
+          "Avalonia.Desktop": {
             "target": "Package",
-            "version": "[1.6.250108002, )"
+            "version": "[11.1.0, )"
+          },
+          "Avalonia.Themes.Fluent": {
+            "target": "Package",
+            "version": "[11.1.0, )"
+          },
+          "Microsoft.NET.ILLink.Tasks": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[9.0.12, )",
+            "autoReferenced": true
           },
           "NAudio": {
             "target": "Package",
@@ -1759,19 +2504,12 @@
             "version": "[9.0.12, 9.0.12]"
           },
           {
-            "name": "Microsoft.Windows.SDK.NET.Ref",
-            "version": "[10.0.22621.57, 10.0.22621.57]"
-          },
-          {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
             "version": "[9.0.12, 9.0.12]"
           }
         ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          },
-          "Microsoft.Windows.SDK.NET.Ref.Windows": {
             "privateAssets": "all"
           }
         },

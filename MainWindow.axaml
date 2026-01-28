@@ -1,0 +1,155 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Lotus.Controls"
+        x:Class="Lotus.MainWindow"
+        Title="LOTUS"
+        Width="420" Height="580"
+        CanResize="False"
+        Background="Transparent"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="NoChrome"
+        WindowStartupLocation="CenterScreen"
+        Topmost="True">
+  
+  <Window.Resources>
+    <SolidColorBrush x:Key="PrimaryBrush" Color="#22C55E"/>
+    <SolidColorBrush x:Key="SecondaryBrush" Color="#86EFAC"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="#16A34A"/>
+    <SolidColorBrush x:Key="GlassBrush" Color="#CCFFFFFF"/>
+  </Window.Resources>
+  
+  <Border Background="{DynamicResource GlassBrush}" 
+          BorderBrush="White" 
+          BorderThickness="2"
+          CornerRadius="20"
+          Margin="10">
+    <Border.Effect>
+      <DropShadowEffect Color="#40000000" BlurRadius="20" OffsetX="0" OffsetY="10"/>
+    </Border.Effect>
+    
+    <Grid RowDefinitions="Auto,*,Auto,Auto">
+      <!-- Header -->
+      <Border Grid.Row="0" 
+              Background="{DynamicResource SecondaryBrush}"
+              Opacity="0.6"
+              CornerRadius="18,18,0,0"
+              Height="45">
+        <Grid ColumnDefinitions="*,Auto,*">
+          <TextBlock Grid.Column="1" Text="🪷 LOTUS" 
+                     VerticalAlignment="Center"
+                     FontFamily="Segoe UI, Microsoft YaHei"
+                     FontWeight="Light"
+                     FontSize="18"
+                     Foreground="#FF2D3748"/>
+        </Grid>
+      </Border>
+      
+      <!-- Mascot -->
+      <Grid Grid.Row="1" Background="Transparent">
+        <controls:MascotControl x:Name="MascotControl" 
+                                Width="200" 
+                                Height="200"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+        
+        <Border x:Name="FeedIndicator"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Margin="0,10"
+                Background="#FFFF6B6B"
+                CornerRadius="15"
+                Padding="12,6"
+                Opacity="0"
+                IsVisible="False">
+          <TextBlock Text="🍴 FEEDING MODE" Foreground="White" FontWeight="Bold"/>
+        </Border>
+      </Grid>
+      
+      <!-- Audio Guardian -->
+      <Border Grid.Row="2" 
+              Background="{DynamicResource SecondaryBrush}"
+              Opacity="0.4"
+              CornerRadius="15"
+              Margin="20,10"
+              Padding="15">
+        <StackPanel>
+          <Grid Margin="0,0,0,10">
+            <TextBlock Text="🔊 Audio Guardian" 
+                       FontWeight="SemiBold" 
+                       Foreground="#FF2D3748"/>
+            <Ellipse x:Name="LimiterIndicator" 
+                     Width="12" Height="12" 
+                     Fill="Gray"
+                     HorizontalAlignment="Right"/>
+          </Grid>
+          <Grid ColumnDefinitions="*,*,*,*,*" Height="80" Margin="0,5,0,0">
+            <ProgressBar x:Name="Bar0" Grid.Column="0" Value="0" Maximum="100"
+                         Background="#22FFFFFF" Margin="2"/>
+            <ProgressBar x:Name="Bar1" Grid.Column="1" Value="0" Maximum="100"
+                         Background="#22FFFFFF" Margin="2"/>
+            <ProgressBar x:Name="Bar2" Grid.Column="2" Value="0" Maximum="100"
+                         Background="#22FFFFFF" Margin="2"/>
+            <ProgressBar x:Name="Bar3" Grid.Column="3" Value="0" Maximum="100"
+                         Background="#22FFFFFF" Margin="2"/>
+            <ProgressBar x:Name="Bar4" Grid.Column="4" Value="0" Maximum="100"
+                         Background="#22FFFFFF" Margin="2"/>
+          </Grid>
+          <TextBlock x:Name="AudioStatus" 
+                     Text="Monitoring..." 
+                     FontSize="10" 
+                     Opacity="0.6"
+                     Margin="0,5,0,0"/>
+        </StackPanel>
+      </Border>
+      
+      <!-- Mensaje flotante -->
+      <Border x:Name="MessageBorder" 
+              Grid.Row="1"
+              Background="{DynamicResource AccentBrush}"
+              CornerRadius="12"
+              Padding="20,12"
+              Margin="30"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Bottom"
+              MaxWidth="360"
+              Opacity="0">
+        <TextBlock x:Name="MessageText" 
+                   TextWrapping="Wrap"
+                   TextAlignment="Center"
+                   Foreground="White"
+                   FontSize="14"/>
+      </Border>
+      
+      <!-- Controles -->
+      <Border Grid.Row="3" 
+              Background="{DynamicResource PrimaryBrush}"
+              Opacity="0.1"
+              CornerRadius="0,0,18,18"/>
+      
+      <StackPanel Grid.Row="3" 
+                  Orientation="Horizontal" 
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Margin="0,15">
+        <Button x:Name="FeedButton"
+                Content="🍃 Feed" 
+                Click="FeedButton_Click"
+                Background="{DynamicResource PrimaryBrush}"
+                Foreground="White"
+                Padding="20,10"
+                Margin="8"
+                CornerRadius="20"
+                FontWeight="SemiBold"/>
+        <Button x:Name="RestButton"
+                Content="⚡ Rest" 
+                Click="RestButton_Click"
+                Background="{DynamicResource SecondaryBrush}"
+                Foreground="#FF2D3748"
+                Padding="20,10"
+                Margin="8"
+                CornerRadius="20"
+                FontWeight="SemiBold"/>
+      </StackPanel>
+    </Grid>
+  </Border>
+</Window>
