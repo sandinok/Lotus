@@ -3,6 +3,8 @@ echo Initializing Git...
 git init
 git config --local user.name "sandinook"
 git config --local user.email "abelvassquez27@gmail.com"
+git add .config --local user.name "sandinook"
+git config --local user.email "abelvassquez27@gmail.com"
 git add .
 git commit -m "Lotus WinUI Fixes"
 
